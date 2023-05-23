@@ -1,0 +1,10 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://djbaaa38xpir4"]
+
+[ext_resource type="FontFile" uid="uid://cf86taq84sp40" path="res://assets/themes/Pangolin-Regular.ttf" id="2_7qc07"]
+
+[resource]
+default_font = ExtResource("2_7qc07")
+default_font_size = 16
+Button/styles/focus = null
+Label/colors/font_outline_color = Color(0, 0, 0, 1)
+Label/constants/outline_size = 8

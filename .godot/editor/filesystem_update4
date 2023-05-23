@@ -1,0 +1,16 @@
+res://scenes/main.tscn
+res://assets/themes/portrait.tres
+res://assets/themes/general_ui.tres
+res://assets/themes/token.tres
+res://scenes/interface.tscn
+res://scenes/world_camera.tscn
+res://scenes/token_manager.tscn
+res://scenes/portrait.tscn
+res://scenes/token.tscn
+res://scenes/portrait_slot.tscn
+res://scripts/portrait_slot.gd
+res://scripts/portrait.gd
+res://scripts/interface.gd
+res://scripts/token.gd
+res://scripts/main.gd
+res://scripts/world_camera.gd

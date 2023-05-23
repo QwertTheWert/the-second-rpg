@@ -1,0 +1,26 @@
+[gd_resource type="Theme" load_steps=8 format=3 uid="uid://depbnjkuectom"]
+
+[ext_resource type="Texture2D" uid="uid://6r6on0y6rkji" path="res://assets/ui-elements/portrait-hover.png" id="1_g2hiy"]
+[ext_resource type="FontFile" uid="uid://cf86taq84sp40" path="res://assets/themes/Pangolin-Regular.ttf" id="1_ktiqj"]
+[ext_resource type="Texture2D" uid="uid://ignbgwfcmaip" path="res://assets/ui-elements/portrait-select.png" id="1_u2yg2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cvx6k"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v5mpt"]
+texture = ExtResource("1_g2hiy")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_syq4e"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_adwrx"]
+texture = ExtResource("1_u2yg2")
+
+[resource]
+default_font = ExtResource("1_ktiqj")
+default_font_size = 16
+BoxContainer/constants/separation = 0
+Button/styles/focus = SubResource("StyleBoxEmpty_cvx6k")
+Button/styles/hover = SubResource("StyleBoxTexture_v5mpt")
+Button/styles/normal = SubResource("StyleBoxEmpty_syq4e")
+Button/styles/pressed = SubResource("StyleBoxTexture_adwrx")
+Label/colors/font_outline_color = Color(0, 0, 0, 1)
+Label/constants/outline_size = 8
