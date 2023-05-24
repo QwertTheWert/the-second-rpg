@@ -1,0 +1,13 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://wicapocvo3uh"]
+
+[ext_resource type="Texture2D" uid="uid://cyyhd0nvcqmwy" path="res://assets/ui-elements/bottom-left-ui-button.png" id="1_q8krb"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dp6kw"]
+texture = ExtResource("1_q8krb")
+
+[resource]
+Button/styles/disabled = SubResource("StyleBoxTexture_dp6kw")
+Button/styles/focus = SubResource("StyleBoxTexture_dp6kw")
+Button/styles/hover = SubResource("StyleBoxTexture_dp6kw")
+Button/styles/normal = SubResource("StyleBoxTexture_dp6kw")
+Button/styles/pressed = SubResource("StyleBoxTexture_dp6kw")

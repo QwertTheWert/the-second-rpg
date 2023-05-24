@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://cw4n5f6q8rhaa"]
 
 [ext_resource type="Script" path="res://scripts/portrait.gd" id="2_dst0n"]
+[ext_resource type="Texture2D" uid="uid://8cjnpyhfme1x" path="res://assets/ui-elements/portraits/fill-up-hp-bar.png" id="2_fmifb"]
 [ext_resource type="Theme" uid="uid://depbnjkuectom" path="res://assets/themes/portrait.tres" id="3_27usx"]
-[ext_resource type="Texture2D" uid="uid://8cjnpyhfme1x" path="res://assets/ui-elements/fill-up-hp-bar.png" id="4_p23ua"]
 
 [node name="Portrait" type="TextureRect" groups=["Portrait"]]
 custom_minimum_size = Vector2(96, 128)
@@ -33,7 +33,7 @@ scale = Vector2(0.25, 0.25)
 mouse_filter = 2
 value = 100.0
 fill_mode = 3
-texture_under = ExtResource("4_p23ua")
+texture_under = ExtResource("2_fmifb")
 
 [node name="HPLabel" type="Label" parent="."]
 layout_mode = 1
@@ -53,12 +53,15 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 8.0
+offset_bottom = 8.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 theme = ExtResource("3_27usx")
 toggle_mode = true
-metadata/_edit_lock_ = true
 
 [connection signal="button_down" from="Button" to="." method="_on_button_down"]
 [connection signal="button_up" from="Button" to="." method="_on_button_up"]

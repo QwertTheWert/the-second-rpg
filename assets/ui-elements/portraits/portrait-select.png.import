@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8cjnpyhfme1x"
-path="res://.godot/imported/fill-up-hp-bar.png-e103528c70c9e68eddd4a330df37b32f.ctex"
+uid="uid://ignbgwfcmaip"
+path="res://.godot/imported/portrait-select.png-ee413521082e921cfb36c09d8fe4a5ce.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui-elements/fill-up-hp-bar.png"
-dest_files=["res://.godot/imported/fill-up-hp-bar.png-e103528c70c9e68eddd4a330df37b32f.ctex"]
+source_file="res://assets/ui-elements/portraits/portrait-select.png"
+dest_files=["res://.godot/imported/portrait-select.png-ee413521082e921cfb36c09d8fe4a5ce.ctex"]
 
 [params]
 

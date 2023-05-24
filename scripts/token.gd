@@ -32,26 +32,31 @@ func unselect(char_id):
 	if char_id != name:
 		$Control/Button.button_pressed = false
 
-
-func _on_button_down():
-	var reselect = token_manager.more_than_one_token_selected()
-	if not game.is_shifted:
-		get_tree().call_group("Token", "unselect", name)
-		unselect(name)
-		if reselect == true:
-			$Control/Button.button_pressed = false
-
-func _on_button_up():
-	var tokens = get_tree().get_nodes_in_group("PC Token")	
-	var portraits = get_tree().get_nodes_in_group("Portrait")
-	for token in tokens:
-		for portrait in portraits:
-			if portrait.name == token.name:
-				portrait.get_node("Button").button_pressed = token.get_node("Control/Button").button_pressed
-				pass
-
 func _mouse_entered():
 	$Control/NamePlate.show()
+	$Control/HoverOutline.show()
 
 func _on_mouse_exited():
 	$Control/NamePlate.hide()
+	$Control/HoverOutline.hide()
+	
+
+func _on_token_click(_viewport, event, _shape_idx):
+	if event is InputEventMouseButton and event.button_index == 1:
+		if event.pressed == true:
+			$Control/Button.button_pressed = not $Control/Button.button_pressed		
+			var reselect = token_manager.more_than_one_token_selected()
+			if not game.is_shifted:
+				get_tree().call_group("Token", "unselect", name)
+				unselect(name)
+				if reselect == true:
+					$Control/Button.button_pressed = true
+		else:
+			var tokens = get_tree().get_nodes_in_group("PC Token")
+			var portraits = get_tree().get_nodes_in_group("Portrait")
+			for token in tokens:
+				for portrait in portraits:
+					if portrait.name == token.name:
+						portrait.get_node("Button").button_pressed = token.get_node("Control/Button").button_pressed
+						pass
+

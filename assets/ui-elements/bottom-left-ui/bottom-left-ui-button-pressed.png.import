@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cukubpjgaqw6q"
-path="res://.godot/imported/portrait-slots.png-c000f9ba855b81eea6240874437ee25e.ctex"
+uid="uid://che4hdpvg68x0"
+path="res://.godot/imported/bottom-left-ui-button-pressed.png-671deefa61cd6a2afbb0b86c9e0ad66f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui-elements/portrait-slots.png"
-dest_files=["res://.godot/imported/portrait-slots.png-c000f9ba855b81eea6240874437ee25e.ctex"]
+source_file="res://assets/ui-elements/bottom-left-ui/bottom-left-ui-button-pressed.png"
+dest_files=["res://.godot/imported/bottom-left-ui-button-pressed.png-671deefa61cd6a2afbb0b86c9e0ad66f.ctex"]
 
 [params]
 

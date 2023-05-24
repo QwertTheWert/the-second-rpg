@@ -1,12 +1,12 @@
+Label
+TextureButton
+TextureRect
 GridContainer
 HBoxContainer
 VBoxContainer
-Label
 Control
 MarginContainer
 TileMap
-TextureButton
-TextureRect
 TextureProgressBar
 ProgressBar
 Button

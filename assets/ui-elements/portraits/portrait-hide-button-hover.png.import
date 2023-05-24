@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ignbgwfcmaip"
-path="res://.godot/imported/portrait-select.png-ccecf7679b237699b89c6d25934ee074.ctex"
+uid="uid://btmhbadi5tuan"
+path="res://.godot/imported/portrait-hide-button-hover.png-58507f0df299beda92fb94b371bf426d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui-elements/portrait-select.png"
-dest_files=["res://.godot/imported/portrait-select.png-ccecf7679b237699b89c6d25934ee074.ctex"]
+source_file="res://assets/ui-elements/portraits/portrait-hide-button-hover.png"
+dest_files=["res://.godot/imported/portrait-hide-button-hover.png-58507f0df299beda92fb94b371bf426d.ctex"]
 
 [params]
 

@@ -42,10 +42,4 @@ func _drop_data(_pos, data):
 		else:
 			data["target_slot"].add_child(get_parent().create_portrait(data["origin_id"]))
 			data["origin_slot"].get_child(0).free()
-
-#func _gui_input(event):
-#	if Input.is_action_just_released("left_click"):
-#		print("hehe")
-
-func _process(delta):
-	print(is_drag_successful())
+	data["origin_slot"].get_child(0)._on_button_up()

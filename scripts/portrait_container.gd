@@ -40,7 +40,7 @@ func more_than_one_portrait_selected():
 func _hide_portrait():
 	if visible:
 		hide()
-		$"../PortraitHideButton".set_text("▶")
+		$"../PortraitHideButton/Label".set_text("▶")
 	else:
 		show()
-		$"../PortraitHideButton".set_text("◀")
+		$"../PortraitHideButton/Label".set_text("◀")

@@ -41,4 +41,5 @@ func _on_button_up():
 		for token in tokens:
 			if token.name == portrait.name:
 				token.get_node("Control/Button").button_pressed = portrait.get_node("Button").button_pressed
+				pass
 	
