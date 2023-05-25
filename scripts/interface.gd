@@ -3,8 +3,8 @@ extends Control
 @export var interface_scale = 1
 
 func _ready():
-	print("haha")
-	set_scale(Vector2(interface_scale,interface_scale))
+	scale = scale * interface_scale
+	
 
 func _can_drop_data(_at_position, _data):
 	return true

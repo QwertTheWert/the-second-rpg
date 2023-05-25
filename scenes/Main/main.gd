@@ -1,7 +1,10 @@
-extends Node
+extends Node2D
+
+@onready var grid = $Grid
 
 var is_shifted = false
 var is_encounter_mode = true
+var selected_players = []
 var heroes = {
 	"PC01": {
 		"char_name" : "Wizard",
@@ -53,6 +56,9 @@ var heroes = {
 	}
 }
 
+func _ready():
+	grid.generate_grid()
+	$Grid/Pathfinding.initialize()
 	
 func _input(event):
 	if event is InputEventKey and event.keycode == KEY_SHIFT:

@@ -38,9 +38,9 @@ func more_than_one_portrait_selected():
 		return false
 
 func _hide_portrait():
-	if visible:
-		hide()
-		$"../PortraitHideButton/Label".set_text("▶")
+	var hide_button = $"../../PortraitHideButton"
+	print("press")
+	if hide_button.button_pressed:
+		get_parent().hide()
 	else:
-		show()
-		$"../PortraitHideButton/Label".set_text("◀")
+		get_parent().show()

@@ -1,20 +1,23 @@
 extends Camera2D
 
-@export var speed = 400
-@export var zoom_speed = 0.15
-@export var min_zoon = 0.4
-@export var max_zoom = 2
-@export var mouse_pan_limit = 2
-var screen_size
-func _ready():
-	screen_size = DisplayServer.window_get_size()
+var speed: float = 400.0
+var zoom_speed: float = 0.05
+var min_zoom: float =  0.001
+var max_zoom: float =  2.0
+var drag_sentivitiy: float = 1.0
+var mouse_pan_limit: int = 2
+
+
+@onready var screen_size = DisplayServer.window_get_size()
+
+func _ready() -> void:
 	position = screen_size/2
 	get_tree().get_root().size_changed.connect(self._on_size_changed)
 
-func _on_size_changed():
+func _on_size_changed() -> void:
 	screen_size = DisplayServer.window_get_size()
 
-func _process(delta):
+func _process(delta)-> void:
 	var velocity = Vector2.ZERO
 	if Input.is_action_pressed("camera_right"):
 		velocity.x += 1
@@ -41,11 +44,12 @@ func _process(delta):
 	position += velocity / zoom * delta
 	position = Vector2(clamp(position.x, 0, screen_size.x), clamp(position.y, 0, screen_size.y))
 
-func _input(event):
+func _input(event) -> void:
+	if event is InputEventMouseMotion and Input.is_mouse_button_pressed(MOUSE_BUTTON_MIDDLE):
+		position -= event.relative * drag_sentivitiy / zoom
 	if event is InputEventMouseButton:
-		if event.is_pressed():
-			if event.button_index == MOUSE_BUTTON_WHEEL_UP:
-				zoom += Vector2(zoom_speed, zoom_speed)
-			if event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
-				zoom -= Vector2(zoom_speed, zoom_speed)
-			zoom = Vector2(clamp(zoom.x, min_zoon, max_zoom), clamp(zoom.y, min_zoon, max_zoom))
+		if event.button_index == MOUSE_BUTTON_WHEEL_UP:
+			zoom += Vector2(zoom_speed, zoom_speed)
+		if event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
+			zoom -= Vector2(zoom_speed, zoom_speed)
+		zoom = clamp(zoom, Vector2(min_zoom, min_zoom), Vector2(max_zoom, max_zoom))

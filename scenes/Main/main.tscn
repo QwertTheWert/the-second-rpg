@@ -1,0 +1,53 @@
+[gd_scene load_steps=11 format=3 uid="uid://e3g6mddl57sr"]
+
+[ext_resource type="Script" path="res://scenes/Main/main.gd" id="1_tf4yk"]
+[ext_resource type="PackedScene" uid="uid://caayoixppdbsj" path="res://scenes/world_camera.tscn" id="2_4dqwc"]
+[ext_resource type="Texture2D" uid="uid://uprbbrdl45hm" path="res://assets/grid/normal.png" id="3_eki4a"]
+[ext_resource type="Script" path="res://scripts/grid.gd" id="3_se1b3"]
+[ext_resource type="Texture2D" uid="uid://d4hjlpke4e28h" path="res://assets/grid/wall.png" id="4_n34uj"]
+[ext_resource type="PackedScene" uid="uid://jltydkmwu4v7" path="res://scenes/token.tscn" id="4_nif1h"]
+[ext_resource type="Script" path="res://scripts/pathfinding.gd" id="5_g5j8s"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uf8ed"]
+texture = ExtResource("3_eki4a")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gkcmf"]
+texture = ExtResource("4_n34uj")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_iga2u"]
+tile_size = Vector2i(128, 128)
+sources/0 = SubResource("TileSetAtlasSource_uf8ed")
+sources/1 = SubResource("TileSetAtlasSource_gkcmf")
+
+[node name="Main" type="Node2D" groups=["Game"]]
+script = ExtResource("1_tf4yk")
+
+[node name="WorldCamera" parent="." instance=ExtResource("2_4dqwc")]
+visible = false
+scale = Vector2(0.307931, 0.717911)
+
+[node name="Grid" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_iga2u")
+format = 2
+layer_0/name = "floor"
+layer_1/name = "building"
+layer_1/enabled = true
+layer_1/modulate = Color(1, 1, 1, 1)
+layer_1/y_sort_enabled = false
+layer_1/y_sort_origin = 0
+layer_1/z_index = 1
+layer_1/tile_data = PackedInt32Array()
+script = ExtResource("3_se1b3")
+
+[node name="Debug" type="Node2D" parent="Grid"]
+
+[node name="Tokens" type="Node2D" parent="Grid"]
+
+[node name="Token" parent="Grid/Tokens" instance=ExtResource("4_nif1h")]
+
+[node name="Pathfinding" type="Node" parent="Grid"]
+script = ExtResource("5_g5j8s")

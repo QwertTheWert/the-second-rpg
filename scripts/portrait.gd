@@ -11,7 +11,7 @@ func _ready():
 
 func set_hp(cur_hp, temp_hp = 0, max_hp = $Image/HPBar.max_value):
 	if temp_hp > 0:
-		$HPLabel.set_text("%s+%s/%s" % [cur_hp, temp_hp, max_hp])
+		$HPLabel.set_text("%s+/%s" % [cur_hp + temp_hp, max_hp])
 	else:	
 		$HPLabel.set_text("%s/%s" % [cur_hp, max_hp])
 	$HPBar.max_value = max_hp

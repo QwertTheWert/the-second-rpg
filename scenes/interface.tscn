@@ -1,13 +1,14 @@
-[gd_scene load_steps=9 format=3 uid="uid://bm7m7j7djcxc0"]
+[gd_scene load_steps=10 format=3 uid="uid://bm7m7j7djcxc0"]
 
 [ext_resource type="Script" path="res://scripts/portrait_container.gd" id="1_ds5jb"]
 [ext_resource type="Script" path="res://scripts/interface.gd" id="1_eoxrq"]
 [ext_resource type="Theme" uid="uid://djbaaa38xpir4" path="res://assets/themes/general_ui.tres" id="2_0l02j"]
+[ext_resource type="Texture2D" uid="uid://b6k2rnlgboprb" path="res://assets/ui-elements/portraits/portrait-background.png" id="2_pu6t4"]
 [ext_resource type="PackedScene" uid="uid://cimnypr5kregm" path="res://scenes/portrait_slot.tscn" id="3_7u3vd"]
 [ext_resource type="Texture2D" uid="uid://1cep3k0kyfmj" path="res://assets/ui-elements/portraits/portrait-hide-button-normal.png" id="5_mpfog"]
 [ext_resource type="Texture2D" uid="uid://chn1djnllii0m" path="res://assets/ui-elements/portraits/portrait-hide-button-pressed.png" id="6_0glek"]
 [ext_resource type="PackedScene" uid="uid://badm7edmrvdei" path="res://scenes/bottom_left_ui_button.tscn" id="6_fsock"]
-[ext_resource type="Texture2D" uid="uid://btmhbadi5tuan" path="res://assets/ui-elements/portraits/portrait-hide-button-hover.png" id="7_083ou"]
+[ext_resource type="PackedScene" uid="uid://c2prx6o5jla5t" path="res://scenes/action_ui.tscn" id="10_w7yy2"]
 
 [node name="Interface" type="Control"]
 layout_mode = 3
@@ -16,38 +17,55 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 mouse_filter = 1
 script = ExtResource("1_eoxrq")
-metadata/_edit_use_anchors_ = true
 
 [node name="TopLeftBox" type="HBoxContainer" parent="."]
 layout_mode = 1
-offset_left = 4.0
-offset_top = 4.0
-offset_right = 666.0
-offset_bottom = 140.0
+offset_right = 690.0
+offset_bottom = 144.0
+theme_override_constants/separation = 0
 metadata/_edit_group_ = true
 
-[node name="PortraitContainer" type="HBoxContainer" parent="TopLeftBox" groups=["UI Containers"]]
+[node name="PortaitContainerBackground" type="TextureRect" parent="TopLeftBox"]
+custom_minimum_size = Vector2(672, 156)
 layout_mode = 2
+texture = ExtResource("2_pu6t4")
+stretch_mode = 1
+
+[node name="PortraitContainer" type="HBoxContainer" parent="TopLeftBox/PortaitContainerBackground" groups=["UI Containers"]]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -322.0
+offset_top = -68.0
+offset_right = 322.0
+offset_bottom = 68.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_ds5jb")
 
-[node name="PortraitSlot1" parent="TopLeftBox/PortraitContainer" instance=ExtResource("3_7u3vd")]
+[node name="PortraitSlot1" parent="TopLeftBox/PortaitContainerBackground/PortraitContainer" instance=ExtResource("3_7u3vd")]
 layout_mode = 2
 
-[node name="PortraitSlot2" parent="TopLeftBox/PortraitContainer" instance=ExtResource("3_7u3vd")]
+[node name="PortraitSlot2" parent="TopLeftBox/PortaitContainerBackground/PortraitContainer" instance=ExtResource("3_7u3vd")]
 layout_mode = 2
 
-[node name="PortraitSlot3" parent="TopLeftBox/PortraitContainer" instance=ExtResource("3_7u3vd")]
+[node name="PortraitSlot3" parent="TopLeftBox/PortaitContainerBackground/PortraitContainer" instance=ExtResource("3_7u3vd")]
 layout_mode = 2
 
-[node name="PortraitSlot4" parent="TopLeftBox/PortraitContainer" instance=ExtResource("3_7u3vd")]
+[node name="PortraitSlot4" parent="TopLeftBox/PortaitContainerBackground/PortraitContainer" instance=ExtResource("3_7u3vd")]
 layout_mode = 2
 
-[node name="PortraitSlot5" parent="TopLeftBox/PortraitContainer" instance=ExtResource("3_7u3vd")]
+[node name="PortraitSlot5" parent="TopLeftBox/PortaitContainerBackground/PortraitContainer" instance=ExtResource("3_7u3vd")]
 layout_mode = 2
 
-[node name="PortraitSlot6" parent="TopLeftBox/PortraitContainer" instance=ExtResource("3_7u3vd")]
+[node name="PortraitSlot6" parent="TopLeftBox/PortaitContainerBackground/PortraitContainer" instance=ExtResource("3_7u3vd")]
 layout_mode = 2
 
 [node name="PortraitHideButton" type="TextureButton" parent="TopLeftBox"]
@@ -55,69 +73,60 @@ custom_minimum_size = Vector2(0, 128)
 layout_mode = 2
 mouse_filter = 1
 theme = ExtResource("2_0l02j")
+toggle_mode = true
 texture_normal = ExtResource("5_mpfog")
 texture_pressed = ExtResource("6_0glek")
-texture_hover = ExtResource("7_083ou")
+texture_hover = ExtResource("5_mpfog")
+stretch_mode = 0
 
-[node name="Label" type="Label" parent="TopLeftBox/PortraitHideButton"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 24
-text = "◀"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
+[node name="BottomLeftBox" type="HBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_top = -260.0
-offset_right = 909.0
+offset_top = -256.0
+offset_right = 96.0
 grow_vertical = 0
 
-[node name="GridContainer" type="GridContainer" parent="HBoxContainer"]
+[node name="GridContainer" type="GridContainer" parent="BottomLeftBox"]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 0
 theme_override_constants/h_separation = 0
 theme_override_constants/v_separation = 0
 columns = 2
 
-[node name="BottomLeftUIButton" parent="HBoxContainer/GridContainer" instance=ExtResource("6_fsock")]
+[node name="BottomLeftUIButton" parent="BottomLeftBox/GridContainer" instance=ExtResource("6_fsock")]
 layout_mode = 2
 
-[node name="BottomLeftUIButton2" parent="HBoxContainer/GridContainer" instance=ExtResource("6_fsock")]
+[node name="BottomLeftUIButton2" parent="BottomLeftBox/GridContainer" instance=ExtResource("6_fsock")]
 layout_mode = 2
 
-[node name="BottomLeftUIButton3" parent="HBoxContainer/GridContainer" instance=ExtResource("6_fsock")]
+[node name="BottomLeftUIButton3" parent="BottomLeftBox/GridContainer" instance=ExtResource("6_fsock")]
 layout_mode = 2
 
-[node name="BottomLeftUIButton4" parent="HBoxContainer/GridContainer" instance=ExtResource("6_fsock")]
+[node name="BottomLeftUIButton4" parent="BottomLeftBox/GridContainer" instance=ExtResource("6_fsock")]
 layout_mode = 2
 
-[node name="BottomLeftUIButton5" parent="HBoxContainer/GridContainer" instance=ExtResource("6_fsock")]
+[node name="BottomLeftUIButton5" parent="BottomLeftBox/GridContainer" instance=ExtResource("6_fsock")]
 layout_mode = 2
 
-[node name="BottomLeftUIButton6" parent="HBoxContainer/GridContainer" instance=ExtResource("6_fsock")]
+[node name="BottomLeftUIButton6" parent="BottomLeftBox/GridContainer" instance=ExtResource("6_fsock")]
 layout_mode = 2
 
-[node name="BottomLeftUIButton7" parent="HBoxContainer/GridContainer" instance=ExtResource("6_fsock")]
+[node name="BottomLeftUIButton7" parent="BottomLeftBox/GridContainer" instance=ExtResource("6_fsock")]
 layout_mode = 2
 
-[node name="BottomLeftUIButton8" parent="HBoxContainer/GridContainer" instance=ExtResource("6_fsock")]
+[node name="BottomLeftUIButton8" parent="BottomLeftBox/GridContainer" instance=ExtResource("6_fsock")]
 layout_mode = 2
 
-[node name="BottomLeftUIButton9" parent="HBoxContainer/GridContainer" instance=ExtResource("6_fsock")]
+[node name="BottomLeftUIButton9" parent="BottomLeftBox/GridContainer" instance=ExtResource("6_fsock")]
 layout_mode = 2
 
-[node name="BottomLeftUIButton10" parent="HBoxContainer/GridContainer" instance=ExtResource("6_fsock")]
+[node name="BottomLeftUIButton10" parent="BottomLeftBox/GridContainer" instance=ExtResource("6_fsock")]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer"]
+[node name="ActionUI" parent="BottomLeftBox" instance=ExtResource("10_w7yy2")]
 layout_mode = 2
 
-[connection signal="pressed" from="TopLeftBox/PortraitHideButton" to="TopLeftBox/PortraitContainer" method="_hide_portrait"]
+[connection signal="pressed" from="TopLeftBox/PortraitHideButton" to="TopLeftBox/PortaitContainerBackground/PortraitContainer" method="_hide_portrait"]

@@ -1,12 +1,6 @@
-res://scenes/bottom_left_ui_button.tscn
-res://assets/themes/portrait.tres
-res://assets/themes/general_ui.tres
+res://scenes/Main/main.tscn
 res://assets/themes/token.tres
-res://scenes/main.tscn
-res://scenes/interface.tscn
-res://scripts/interface.gd
-res://scenes/portrait.tscn
-res://scripts/portrait.gd
-res://scripts/portrait_slot.gd
-res://scenes/portrait_slot.tscn
-res://scripts/portrait_container.gd
+res://assets/themes/portrait.tres
+res://scenes/token.tscn
+res://scripts/pathfinding.gd
+res://scripts/token.gd

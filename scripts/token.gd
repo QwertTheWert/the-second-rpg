@@ -1,62 +1,39 @@
-extends Node2D
+extends Area2D
 
-var mouse_is_over_token = false
+@onready var main = get_tree().root.get_node("Main")
+@onready var grid: Grid = main.get_node("Grid")
+@onready var pf: Pathfinder = grid.get_node("Pathfinding")
 
-var game
-var token_manager
+var data: Token_Data = Token_Data.new()
 
-var char_name
-var allegiance
- 
+var path: Array[Vector2]
+var pos: Vector2 :
+	get:
+		return pos
+	set(value):
+		pos = value
+
 func _ready():
-	$Control/NamePlate.set_text(char_name)
-	game = get_tree().get_nodes_in_group("Game")[0]
-	token_manager = get_tree().get_nodes_in_group("Token Manager")[0]
-	if allegiance == "Party":
-		add_to_group("PC Token")
-
-func set_hp(cur_hp, temp_hp = 0, max_hp = $Control/HPBar.max_value):
-	$Control/HPBar.max_value = max_hp
-	$Control/HPBar.value = cur_hp
+	pos = grid.world_to_grid(position)
 	
-	$Control/HPBar/TempHPBar.max_value = max_hp
-	$Control/HPBar/TempHPBar.value = temp_hp
+func _process(delta):
+	move(delta)
 
-	
-func _hp_changed(hero, cur_hp, temp_hp = 0):
-	if hero == name:
-		set_hp(cur_hp, temp_hp)
-		
-
-func unselect(char_id):
-	if char_id != name:
-		$Control/Button.button_pressed = false
-
-func _mouse_entered():
-	$Control/NamePlate.show()
-	$Control/HoverOutline.show()
-
-func _on_mouse_exited():
-	$Control/NamePlate.hide()
-	$Control/HoverOutline.hide()
-	
-
-func _on_token_click(_viewport, event, _shape_idx):
-	if event is InputEventMouseButton and event.button_index == 1:
-		if event.pressed == true:
-			$Control/Button.button_pressed = not $Control/Button.button_pressed		
-			var reselect = token_manager.more_than_one_token_selected()
-			if not game.is_shifted:
-				get_tree().call_group("Token", "unselect", name)
-				unselect(name)
-				if reselect == true:
-					$Control/Button.button_pressed = true
+func move(delta):
+	if path.size() > 0:
+		if position.distance_to(grid.grid_to_world(path[0])) < 5:
+			position = grid.grid_to_world(path[0])
+			pos = path[0]
+			path.pop_front()
 		else:
-			var tokens = get_tree().get_nodes_in_group("PC Token")
-			var portraits = get_tree().get_nodes_in_group("Portrait")
-			for token in tokens:
-				for portrait in portraits:
-					if portrait.name == token.name:
-						portrait.get_node("Button").button_pressed = token.get_node("Control/Button").button_pressed
-						pass
+			position += (grid.grid_to_world(path[0]) - position).normalized() * data.speed * delta
 
+func _input(event):
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+		if event.pressed == true:
+			print("run")
+#			if path.size() > 0:
+#				path = [path.front()]
+			var clicked = grid.world_to_grid(get_global_mouse_position())
+			var path_packed_arrays = PackedVector2Array([])
+			path_packed_arrays = pf.generate_path(pos, clicked)

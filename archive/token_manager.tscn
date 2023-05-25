@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bpg5p04ga4asr"]
 
-[ext_resource type="Script" path="res://scripts/token_manager.gd" id="1_b8cxj"]
+[ext_resource type="Script" path="res://archive/token_manager.gd" id="1_b8cxj"]
 
 [node name="TokenManager" type="Node" groups=["Token Manager"]]
 script = ExtResource("1_b8cxj")

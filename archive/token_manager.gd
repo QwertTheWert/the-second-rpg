@@ -1,6 +1,6 @@
 extends Node
 
-var TOKEN_SCENE_PATH = preload("res://scenes/token.tscn")
+var TOKEN_SCENE_PATH = preload("res://archive/token.tscn")
 var GRID_SIZE = 128
 
 signal hp_changed
