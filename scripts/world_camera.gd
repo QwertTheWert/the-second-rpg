@@ -2,7 +2,7 @@ extends Camera2D
 
 var speed: float = 400.0
 var zoom_speed: float = 0.05
-var min_zoom: float =  0.001
+var min_zoom: float =  0.1
 var max_zoom: float =  2.0
 var drag_sentivitiy: float = 1.0
 var mouse_pan_limit: int = 2

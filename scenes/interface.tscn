@@ -26,6 +26,7 @@ script = ExtResource("1_eoxrq")
 layout_mode = 1
 offset_right = 690.0
 offset_bottom = 144.0
+mouse_filter = 0
 theme_override_constants/separation = 0
 metadata/_edit_group_ = true
 

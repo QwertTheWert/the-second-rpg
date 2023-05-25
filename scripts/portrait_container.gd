@@ -39,7 +39,6 @@ func more_than_one_portrait_selected():
 
 func _hide_portrait():
 	var hide_button = $"../../PortraitHideButton"
-	print("press")
 	if hide_button.button_pressed:
 		get_parent().hide()
 	else:

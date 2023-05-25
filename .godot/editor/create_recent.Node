@@ -1,3 +1,5 @@
+CanvasLayer
+Line2D
 NavigationAgent2D
 TileMap
 Node
@@ -18,5 +20,4 @@ TextureProgressBar
 ProgressBar
 Button
 Camera2D
-CanvasLayer
 Panel

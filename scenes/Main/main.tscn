@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://e3g6mddl57sr"]
+[gd_scene load_steps=12 format=3 uid="uid://e3g6mddl57sr"]
 
 [ext_resource type="Script" path="res://scenes/Main/main.gd" id="1_tf4yk"]
 [ext_resource type="PackedScene" uid="uid://caayoixppdbsj" path="res://scenes/world_camera.tscn" id="2_4dqwc"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://d4hjlpke4e28h" path="res://assets/grid/wall.png" id="4_n34uj"]
 [ext_resource type="PackedScene" uid="uid://jltydkmwu4v7" path="res://scenes/token.tscn" id="4_nif1h"]
 [ext_resource type="Script" path="res://scripts/pathfinding.gd" id="5_g5j8s"]
+[ext_resource type="Script" path="res://scripts/tokens.gd" id="6_12p1o"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uf8ed"]
 texture = ExtResource("3_eki4a")
@@ -46,8 +47,13 @@ script = ExtResource("3_se1b3")
 [node name="Debug" type="Node2D" parent="Grid"]
 
 [node name="Tokens" type="Node2D" parent="Grid"]
+script = ExtResource("6_12p1o")
 
 [node name="Token" parent="Grid/Tokens" instance=ExtResource("4_nif1h")]
+position = Vector2(64, 64)
+
+[node name="Line2D" type="Line2D" parent="Grid/Tokens"]
+default_color = Color(1, 0, 0, 1)
 
 [node name="Pathfinding" type="Node" parent="Grid"]
 script = ExtResource("5_g5j8s")

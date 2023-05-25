@@ -58,7 +58,6 @@ var heroes = {
 
 func _ready():
 	grid.generate_grid()
-	$Grid/Pathfinding.initialize()
 	
 func _input(event):
 	if event is InputEventKey and event.keycode == KEY_SHIFT:
