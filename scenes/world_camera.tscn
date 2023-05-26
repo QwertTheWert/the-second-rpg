@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://caayoixppdbsj"]
-
-[ext_resource type="Script" path="res://scripts/world_camera.gd" id="1_xheqo"]
-
-[node name="WorldCamera" type="Camera2D"]
-script = ExtResource("1_xheqo")

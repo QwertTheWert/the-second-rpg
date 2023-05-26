@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="Character_Data" load_steps=2 format=3 uid="uid://cpe7hiwrik8dy"]
+
+[ext_resource type="Script" path="res://scripts/data/character_data.gd" id="1_6rdxg"]
+
+[resource]
+script = ExtResource("1_6rdxg")
+id = 0
+name = "Barlo"
+image_path = "res://assets/character/barlo"
+level = 1
+experience = 0
+ancestry = 0
+heritage = 0
+background = 0
+size = 2
+key_ability = 0
+languages = Array[String](["Common"])
+speed = 5
+hp_max = 17
+hp_cur = 17
+hp_temp = 0
+abil_str = 0.0
+abil_dex = 0.0
+abil_con = 0.0
+abil_int = 0.0
+abil_wis = 0.0
+abil_cha = 0.0
+map_position = Vector2i(2, 2)

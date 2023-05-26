@@ -1,14 +1,14 @@
 [gd_scene load_steps=10 format=3 uid="uid://bm7m7j7djcxc0"]
 
-[ext_resource type="Script" path="res://scripts/portrait_container.gd" id="1_ds5jb"]
-[ext_resource type="Script" path="res://scripts/interface.gd" id="1_eoxrq"]
+[ext_resource type="Script" path="res://archive/scripts/portrait_container.gd" id="1_ds5jb"]
+[ext_resource type="Script" path="res://archive/scripts/interface.gd" id="1_eoxrq"]
 [ext_resource type="Theme" uid="uid://djbaaa38xpir4" path="res://assets/themes/general_ui.tres" id="2_0l02j"]
 [ext_resource type="Texture2D" uid="uid://b6k2rnlgboprb" path="res://assets/ui-elements/portraits/portrait-background.png" id="2_pu6t4"]
-[ext_resource type="PackedScene" uid="uid://cimnypr5kregm" path="res://scenes/portrait_slot.tscn" id="3_7u3vd"]
+[ext_resource type="PackedScene" uid="uid://cimnypr5kregm" path="res://archive/scenes/portrait_slot.tscn" id="3_7u3vd"]
 [ext_resource type="Texture2D" uid="uid://1cep3k0kyfmj" path="res://assets/ui-elements/portraits/portrait-hide-button-normal.png" id="5_mpfog"]
 [ext_resource type="Texture2D" uid="uid://chn1djnllii0m" path="res://assets/ui-elements/portraits/portrait-hide-button-pressed.png" id="6_0glek"]
-[ext_resource type="PackedScene" uid="uid://badm7edmrvdei" path="res://scenes/bottom_left_ui_button.tscn" id="6_fsock"]
-[ext_resource type="PackedScene" uid="uid://c2prx6o5jla5t" path="res://scenes/action_ui.tscn" id="10_w7yy2"]
+[ext_resource type="PackedScene" uid="uid://badm7edmrvdei" path="res://archive/scenes/bottom_left_ui_button.tscn" id="6_fsock"]
+[ext_resource type="PackedScene" uid="uid://c2prx6o5jla5t" path="res://archive/scenes/action_ui.tscn" id="10_w7yy2"]
 
 [node name="Interface" type="Control"]
 layout_mode = 3

@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="Character_Data" load_steps=2 format=3 uid="uid://cr5r2xr1hek6x"]
+
+[ext_resource type="Script" path="res://scripts/data/character_data.gd" id="1_6rdxg"]
+
+[resource]
+script = ExtResource("1_6rdxg")
+id = 0
+name = "Default"
+image_path = "res://assets/character/vasha"
+level = 1
+experience = 0
+ancestry = 0
+heritage = 0
+background = 0
+size = 2
+key_ability = 0
+languages = Array[String](["Common"])
+speed = 5
+hp_max = 17
+hp_cur = 17
+hp_temp = 0
+abil_str = 0.0
+abil_dex = 2.0
+abil_con = 1.0
+abil_int = 0.0
+abil_wis = 2.0
+abil_cha = 4.0
+map_position = Vector2i(3, 3)

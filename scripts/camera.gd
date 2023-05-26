@@ -1,9 +1,9 @@
 extends Camera2D
 
 var speed: float = 400.0
-var zoom_speed: float = 0.05
-var min_zoom: float =  0.1
-var max_zoom: float =  2.0
+var zoom_speed: float = 0.2
+var min_zoom: float =  1.0
+var max_zoom: float =  6.0
 var drag_sentivitiy: float = 1.0
 var mouse_pan_limit: int = 2
 
@@ -11,7 +11,7 @@ var mouse_pan_limit: int = 2
 @onready var screen_size = DisplayServer.window_get_size()
 
 func _ready() -> void:
-	position = screen_size/2
+#	position = screen_size/2
 	get_tree().get_root().size_changed.connect(self._on_size_changed)
 
 func _on_size_changed() -> void:

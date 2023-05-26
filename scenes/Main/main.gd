@@ -1,63 +1,20 @@
+class_name Main
 extends Node2D
 
-@onready var grid = $Grid
+@onready var _grid = $Grid
+@onready var _tokens = $Grid/Tokens
+
+@export var _save: Save_Data
 
 var is_shifted = false
 var is_encounter_mode = true
 var selected_players = []
-var heroes = {
-	"PC01": {
-		"char_name" : "Wizard",
-		"max_hp" : 16, 
-		"cur_hp" : 8, 
-		"temp_hp" : 0,
-		"portrait_path" : "res://assets/player-characters-portraits/wizard.png",
-		"token_path" : "res://assets/player-characters-tokens/wizard.png"
-	},
-	"PC02": {
-		"char_name" : "Paladin",
-		"max_hp" : 200, 
-		"cur_hp" : 150, 
-		"temp_hp" : 50,
-		"portrait_path" : "res://assets/player-characters-portraits/paladin.png",
-		"token_path" : "res://assets/player-characters-tokens/paladin.png"
-	},
-	"PC03": {
-		"char_name" : "Rogue",
-		"max_hp" : 18, 
-		"cur_hp" : 13, 
-		"temp_hp" : 0,
-		"portrait_path" : "res://assets/player-characters-portraits/rogue.png",
-		"token_path" : "res://assets/player-characters-tokens/rogue.png"
-	},
-	"PC04": {
-		"char_name" : "Bard",
-		"max_hp" : 19, 
-		"cur_hp" : 2, 
-		"temp_hp" : 0,
-		"portrait_path" : "res://assets/player-characters-portraits/bard.png",
-		"token_path" : "res://assets/player-characters-tokens/bard.png"
-	},
-	"PC05": {
-		"char_name" : "Cleric",
-		"max_hp" : 14, 
-		"cur_hp" : 0, 
-		"temp_hp" : 0,
-		"portrait_path" : "res://assets/player-characters-portraits/cleric.png",
-		"token_path" : "res://assets/player-characters-tokens/cleric.png"
-	},
-	"PC06": {
-		"char_name" : "Sorcerer",
-		"max_hp" : 14, 
-		"cur_hp" : 14, 
-		"temp_hp" : 1,
-		"portrait_path" : "res://assets/player-characters-portraits/sorcerer.png",
-		"token_path" : "res://assets/player-characters-tokens/sorcerer.png"
-	}
-}
 
 func _ready():
-	grid.generate_grid()
+	_create_or_load_save()
+	_grid.generate_grid()
+	_grid.generate_area()
+	_tokens.generate_tokens()
 	
 func _input(event):
 	if event is InputEventKey and event.keycode == KEY_SHIFT:
@@ -65,3 +22,25 @@ func _input(event):
 			is_shifted = true
 		else:
 			is_shifted = false
+			
+func _create_or_load_save() -> void:
+	if Save_Data.save_exists():
+		_save = Save_Data.load_save_data() as Save_Data
+	else:
+		_save = Save_Data.new()
+		_load_characters()
+		_save.map_name = "map_1"
+		_save.global_position = Vector2i(2,2)
+		
+		_save.write_save_data()
+	
+	_tokens.characters = _save.characters
+
+func _load_characters():
+	var dir = DirAccess.open(_save.CHARACTERS_FOLDER_PATH)
+	dir.list_dir_begin()
+	var file = dir.get_next()
+	while file != "":
+		var file_to_play_with = load(_save.CHARACTERS_FOLDER_PATH + file)
+		_save.characters.append(file_to_play_with)
+		file = dir.get_next()

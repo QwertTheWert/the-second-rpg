@@ -1,35 +1,46 @@
-[gd_scene load_steps=12 format=3 uid="uid://e3g6mddl57sr"]
+[gd_scene load_steps=13 format=3 uid="uid://e3g6mddl57sr"]
 
-[ext_resource type="Script" path="res://scenes/Main/main.gd" id="1_tf4yk"]
-[ext_resource type="PackedScene" uid="uid://caayoixppdbsj" path="res://scenes/world_camera.tscn" id="2_4dqwc"]
-[ext_resource type="Texture2D" uid="uid://uprbbrdl45hm" path="res://assets/grid/normal.png" id="3_eki4a"]
-[ext_resource type="Script" path="res://scripts/grid.gd" id="3_se1b3"]
-[ext_resource type="Texture2D" uid="uid://d4hjlpke4e28h" path="res://assets/grid/wall.png" id="4_n34uj"]
-[ext_resource type="PackedScene" uid="uid://jltydkmwu4v7" path="res://scenes/token.tscn" id="4_nif1h"]
-[ext_resource type="Script" path="res://scripts/pathfinding.gd" id="5_g5j8s"]
-[ext_resource type="Script" path="res://scripts/tokens.gd" id="6_12p1o"]
+[ext_resource type="Script" path="res://scenes/Main/main.gd" id="1_lausv"]
+[ext_resource type="Script" path="res://scripts/camera.gd" id="2_tmi1u"]
+[ext_resource type="Texture2D" uid="uid://uprbbrdl45hm" path="res://assets/grid/normal.png" id="3_sifcv"]
+[ext_resource type="Texture2D" uid="uid://d4hjlpke4e28h" path="res://assets/grid/wall.png" id="4_fq4u5"]
+[ext_resource type="Script" path="res://scripts/grid.gd" id="5_twm3q"]
+[ext_resource type="Script" path="res://scripts/token/tokens.gd" id="6_84k2e"]
+[ext_resource type="Script" path="res://scripts/pathfinding.gd" id="8_b07lh"]
+[ext_resource type="Texture2D" uid="uid://dxatl6tu55rai" path="res://icon.svg" id="8_mb0os"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uf8ed"]
-texture = ExtResource("3_eki4a")
-texture_region_size = Vector2i(128, 128)
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2u1b3"]
+texture = ExtResource("3_sifcv")
+texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gkcmf"]
-texture = ExtResource("4_n34uj")
-texture_region_size = Vector2i(128, 128)
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q5457"]
+texture = ExtResource("4_fq4u5")
+texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_iga2u"]
-tile_size = Vector2i(128, 128)
-sources/0 = SubResource("TileSetAtlasSource_uf8ed")
-sources/1 = SubResource("TileSetAtlasSource_gkcmf")
+tile_size = Vector2i(32, 32)
+sources/1 = SubResource("TileSetAtlasSource_q5457")
+sources/0 = SubResource("TileSetAtlasSource_2u1b3")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m3d5m"]
 
 [node name="Main" type="Node2D" groups=["Game"]]
-script = ExtResource("1_tf4yk")
+script = ExtResource("1_lausv")
 
-[node name="WorldCamera" parent="." instance=ExtResource("2_4dqwc")]
-visible = false
-scale = Vector2(0.307931, 0.717911)
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+offset_right = 128.0
+offset_bottom = 128.0
+size_flags_horizontal = 0
+mouse_filter = 0
+texture = ExtResource("8_mb0os")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2.5, 2.5)
+script = ExtResource("2_tmi1u")
 
 [node name="Grid" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_iga2u")
@@ -42,18 +53,20 @@ layer_1/y_sort_enabled = false
 layer_1/y_sort_origin = 0
 layer_1/z_index = 1
 layer_1/tile_data = PackedInt32Array()
-script = ExtResource("3_se1b3")
+script = ExtResource("5_twm3q")
+
+[node name="Area2D" type="Area2D" parent="Grid"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Grid/Area2D"]
+shape = SubResource("RectangleShape2D_m3d5m")
 
 [node name="Debug" type="Node2D" parent="Grid"]
 
 [node name="Tokens" type="Node2D" parent="Grid"]
-script = ExtResource("6_12p1o")
-
-[node name="Token" parent="Grid/Tokens" instance=ExtResource("4_nif1h")]
-position = Vector2(64, 64)
+script = ExtResource("6_84k2e")
 
 [node name="Line2D" type="Line2D" parent="Grid/Tokens"]
 default_color = Color(1, 0, 0, 1)
 
 [node name="Pathfinding" type="Node" parent="Grid"]
-script = ExtResource("5_g5j8s")
+script = ExtResource("8_b07lh")
