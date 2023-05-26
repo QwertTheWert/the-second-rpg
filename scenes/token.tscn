@@ -1,85 +1,25 @@
-[gd_scene load_steps=9 format=3 uid="uid://jltydkmwu4v7"]
+[gd_scene load_steps=10 format=3 uid="uid://jltydkmwu4v7"]
 
 [ext_resource type="Script" path="res://scripts/token/token.gd" id="1_p3ebf"]
 [ext_resource type="Texture2D" uid="uid://dvet1lp4bpqp4" path="res://assets/ui-elements/token-hover.png" id="3_5xds2"]
 [ext_resource type="Theme" uid="uid://bfc3syk5qierl" path="res://assets/themes/token.tres" id="4_wsluq"]
+[ext_resource type="Texture2D" uid="uid://bodjxrtt541de" path="res://assets/ui-elements/token-select.png" id="5_btq0v"]
 [ext_resource type="Texture2D" uid="uid://x6yjkonm2bpd" path="res://assets/ui-elements/token-health-bar-under.png" id="5_wdcwb"]
 [ext_resource type="Texture2D" uid="uid://2lvytcx2qhfg" path="res://assets/ui-elements/token-health-bar-progress.png" id="6_7k617"]
 [ext_resource type="Texture2D" uid="uid://dda1ce6fiib7x" path="res://assets/ui-elements/token-temp-health-bar-progress.png" id="7_b2e64"]
-[ext_resource type="Texture2D" uid="uid://b2uj51mk6nbbx" path="res://assets/character/barlo/token.png" id="7_b43ru"]
+[ext_resource type="Script" path="res://scripts/token/token_button.gd" id="8_fup6u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d2ptp"]
 size = Vector2(32, 32)
 
-[node name="Token" type="Area2D"]
+[node name="Token" type="Area2D" groups=["Character", "Token"]]
 script = ExtResource("1_p3ebf")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.125, 0.125)
-texture = ExtResource("7_b43ru")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_d2ptp")
-
-[node name="Button" type="Button" parent="."]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -16.0
-offset_top = -16.0
-offset_right = -16.0
-offset_bottom = -16.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 1
-theme = ExtResource("4_wsluq")
-toggle_mode = true
-metadata/_edit_lock_ = true
-
-[node name="HPBar" type="TextureProgressBar" parent="."]
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -16.0
-offset_top = 7.0
-offset_right = -16.0
-offset_bottom = 15.0
-grow_horizontal = 2
-grow_vertical = 0
-mouse_filter = 2
-nine_patch_stretch = true
-texture_under = ExtResource("5_wdcwb")
-texture_progress = ExtResource("6_7k617")
-metadata/_edit_group_ = true
-
-[node name="TempHPBar" type="TextureProgressBar" parent="HPBar"]
-layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -16.0
-grow_horizontal = 2
-grow_vertical = 0
-mouse_filter = 2
-texture_progress = ExtResource("7_b2e64")
-texture_progress_offset = Vector2(10, 4)
-
-[node name="NamePlate" type="Label" parent="."]
-visible = false
-anchors_preset = 10
-anchor_right = 1.0
-offset_left = -30.5
-offset_top = -50.0
-offset_right = 30.5
-offset_bottom = 7.0
-grow_horizontal = 2
-theme = ExtResource("4_wsluq")
-theme_override_font_sizes/font_size = 24
-text = "NAME"
-horizontal_alignment = 1
-vertical_alignment = 2
 
 [node name="Control" type="Control" parent="."]
 custom_minimum_size = Vector2(32, 32)
@@ -93,11 +33,93 @@ offset_right = 16.0
 offset_bottom = 16.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
+
+[node name="SelectOutline" type="TextureRect" parent="Control"]
+visible = false
+texture_filter = 1
+offset_right = 128.0
+offset_bottom = 128.0
+scale = Vector2(0.25, 0.25)
+mouse_filter = 2
+texture = ExtResource("5_btq0v")
 
 [node name="HoverOutline" type="TextureRect" parent="Control"]
 visible = false
-layout_mode = 0
-offset_right = 128.0
-offset_bottom = 128.0
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 112.0
+offset_bottom = 112.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.25, 0.25)
 mouse_filter = 2
 texture = ExtResource("3_5xds2")
+
+[node name="HPBar" type="TextureProgressBar" parent="Control"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -9.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+value = 100.0
+nine_patch_stretch = true
+texture_under = ExtResource("5_wdcwb")
+texture_progress = ExtResource("6_7k617")
+metadata/_edit_group_ = true
+
+[node name="TempHPBar" type="TextureProgressBar" parent="Control/HPBar"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -16.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+texture_progress = ExtResource("7_b2e64")
+texture_progress_offset = Vector2(10, 4)
+
+[node name="NamePlate" type="Label" parent="Control"]
+visible = false
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -14.5
+offset_top = -57.0
+offset_right = 46.5
+grow_horizontal = 2
+theme = ExtResource("4_wsluq")
+theme_override_font_sizes/font_size = 24
+text = "NAME"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Button" type="TextureButton" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+disabled = true
+toggle_mode = true
+script = ExtResource("8_fup6u")
+
+[connection signal="gui_input" from="Button" to="Button" method="_on_gui_input"]

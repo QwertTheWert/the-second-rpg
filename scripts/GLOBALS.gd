@@ -1,11 +1,45 @@
+class_name GLOBALS
 extends Node
 
+enum Ancestry {
+	DWARF,
+	ELF,
+	GNOME,
+	HALFLING,
+	HUMAN,
+	ORC
+}
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+enum Heritage {
+	HERITAGE_1,
+	HERITAGE_2
+}
+enum Background {
+	BACKGROUND_1, 
+	BACKGROUND_2
+}
 
+enum Class {
+	CLERIC,
+	FIGHTER,
+	ROGUE,
+	WIZARD
+}
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+enum Ability {
+	STRENGTH, DEXTERITY, CONSTITUTION, INTELLIGENCE, WISDOM, CHARISMA
+}
+
+enum Size {
+	TINY, 
+	SMALL, 
+	MEDIUM, 
+	LARGE, 
+	HUGE, 
+	GARGANTUAN
+}
+
+enum Mode {
+	EXPLORATION,
+	ENCOUNTER
+}

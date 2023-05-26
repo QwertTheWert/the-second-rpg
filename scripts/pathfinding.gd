@@ -7,9 +7,6 @@ var aStar = AStarGrid2D.new()
 
 var move_speed: float = 5.0
 
-const DIAGONALS = [Vector2.UP+Vector2.RIGHT, Vector2.DOWN+Vector2.RIGHT, Vector2.UP+Vector2.LEFT, Vector2.DOWN+Vector2.LEFT]
-const DIRECTIONS = [Vector2.UP, Vector2.DOWN, Vector2.LEFT, Vector2.RIGHT, Vector2.UP+Vector2.RIGHT, Vector2.DOWN+Vector2.RIGHT, Vector2.UP+Vector2.LEFT, Vector2.DOWN+Vector2.LEFT]
-
 func _ready():
 	aStar.set_size(Vector2i(32, 32))
 	aStar.set_cell_size(Vector2(12, 12))

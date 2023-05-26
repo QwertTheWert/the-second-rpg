@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="Character_Data" load_steps=2 format=3 uid="uid://btv0v2gik8iqd"]
+
+[ext_resource type="Script" path="res://scripts/data/character_data.gd" id="1_dk20x"]
+
+[resource]
+script = ExtResource("1_dk20x")
+id = 3
+name = "Koro"
+image_path = "res://assets/character/koro"
+level = 1
+experience = 0
+ancestry = 4
+heritage = 0
+background = 0
+character_class = 2
+size = 2
+key_ability = 0
+languages = Array[String](["Common"])
+speed = 5
+hp_max = 18
+hp_cur = 18
+hp_temp = 0
+abil_str = 0.0
+abil_dex = 0.0
+abil_con = 0.0
+abil_int = 0.0
+abil_wis = 0.0
+abil_cha = 0.0
+map_position = Vector2i(3, 3)

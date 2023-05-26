@@ -1,5 +1,9 @@
-CollisionShape2D
+Control
 Area2D
+TextureButton
+Button
+Timer
+CollisionShape2D
 TextureRect
 CanvasLayer
 Camera2D
@@ -9,9 +13,7 @@ TileMap
 Node
 Node2D
 Sprite2D
-TextureButton
 Container
-Control
 VBoxContainer
 HBoxContainer
 Label
@@ -19,5 +21,4 @@ GridContainer
 MarginContainer
 TextureProgressBar
 ProgressBar
-Button
 Panel

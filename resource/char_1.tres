@@ -4,25 +4,26 @@
 
 [resource]
 script = ExtResource("1_6rdxg")
-id = 0
-name = "Default"
+id = 1
+name = "Vasha"
 image_path = "res://assets/character/vasha"
 level = 1
 experience = 0
 ancestry = 0
 heritage = 0
 background = 0
+character_class = 1
 size = 2
 key_ability = 0
 languages = Array[String](["Common"])
 speed = 5
-hp_max = 17
-hp_cur = 17
+hp_max = 20
+hp_cur = 20
 hp_temp = 0
 abil_str = 0.0
-abil_dex = 2.0
-abil_con = 1.0
+abil_dex = 0.0
+abil_con = 0.0
 abil_int = 0.0
-abil_wis = 2.0
-abil_cha = 4.0
-map_position = Vector2i(3, 3)
+abil_wis = 0.0
+abil_cha = 0.0
+map_position = Vector2i(2, 3)

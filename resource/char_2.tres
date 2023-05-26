@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="Character_Data" load_steps=2 format=3 uid="uid://dhtl53nvtysml"]
+
+[ext_resource type="Script" path="res://scripts/data/character_data.gd" id="1_ndc8f"]
+
+[resource]
+script = ExtResource("1_ndc8f")
+id = 2
+name = "Belok"
+image_path = "res://assets/character/belok"
+level = 1
+experience = 0
+ancestry = 4
+heritage = 0
+background = 0
+character_class = 3
+size = 2
+key_ability = 0
+languages = Array[String](["Common"])
+speed = 5
+hp_max = 16
+hp_cur = 16
+hp_temp = 0
+abil_str = 0.0
+abil_dex = 0.0
+abil_con = 0.0
+abil_int = 0.0
+abil_wis = 0.0
+abil_cha = 0.0
+map_position = Vector2i(3, 2)

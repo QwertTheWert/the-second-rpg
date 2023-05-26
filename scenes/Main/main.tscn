@@ -65,8 +65,7 @@ shape = SubResource("RectangleShape2D_m3d5m")
 [node name="Tokens" type="Node2D" parent="Grid"]
 script = ExtResource("6_84k2e")
 
-[node name="Line2D" type="Line2D" parent="Grid/Tokens"]
-default_color = Color(1, 0, 0, 1)
-
 [node name="Pathfinding" type="Node" parent="Grid"]
 script = ExtResource("8_b07lh")
+
+[node name="Timer" type="Timer" parent="."]

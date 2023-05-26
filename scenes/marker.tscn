@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://b40selp451c3i"]
+
+[ext_resource type="Texture2D" uid="uid://0sfvxtq4vt7w" path="res://assets/ui-elements/marker.png" id="1_fc0d4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d2ptp"]
+size = Vector2(32, 32)
+
+[node name="Marker" type="Area2D" groups=["Marker", "Token"]]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_fc0d4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_d2ptp")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0

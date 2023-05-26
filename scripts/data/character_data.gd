@@ -6,10 +6,12 @@ extends Resource
 @export_dir var image_path: String
 @export var level := 1
 @export var experience := 0
-@export var ancestry := 0
-@export var heritage := 0
-@export var background := 0
-@export var size:= 2
+@export var ancestry := GLOBALS.Ancestry.HUMAN
+@export var heritage := GLOBALS.Heritage.HERITAGE_1
+@export var background := GLOBALS.Background.BACKGROUND_1
+@export var character_class:= GLOBALS.Class.CLERIC
+
+@export var size:= GLOBALS.Size.MEDIUM
 @export var key_ability:= 0
 
 @export var languages: Array[String] = ["Common"]
