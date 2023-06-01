@@ -1,0 +1,61 @@
+[gd_scene load_steps=3 format=3 uid="uid://cicmfvtd3d6ii"]
+
+[ext_resource type="Texture2D" uid="uid://c4iln1ixjbqf1" path="res://assets/portrait/normal.png" id="1_wrk3w"]
+[ext_resource type="Texture2D" uid="uid://ciaikqjpag3j" path="res://assets/portrait/selected.png" id="2_jjbgu"]
+
+[node name="Portrait Drag" type="Control"]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 0
+scale = Vector2(0.5, 0.5)
+
+[node name="Image" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -96.0
+offset_top = -128.0
+offset_right = 288.0
+offset_bottom = 384.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+mouse_filter = 2
+
+[node name="StandardOutline" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -96.0
+offset_top = -128.0
+offset_right = 96.0
+offset_bottom = 128.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_wrk3w")
+
+[node name="SelectedOutline" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -96.0
+offset_top = -128.0
+offset_right = 96.0
+offset_bottom = 128.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_jjbgu")

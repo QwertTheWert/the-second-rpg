@@ -1,0 +1,150 @@
+[gd_scene load_steps=16 format=3 uid="uid://e2jof7gpnqap"]
+
+[ext_resource type="Texture2D" uid="uid://c7qncisqoraat" path="res://assets/portrait/background.png" id="1_dvelo"]
+[ext_resource type="Script" path="res://scripts/portrait/portrait.gd" id="2_5m78l"]
+[ext_resource type="Texture2D" uid="uid://bodjxrtt541de" path="res://assets/ui-elements/token-select.png" id="3_3y2a3"]
+[ext_resource type="Texture2D" uid="uid://c4iln1ixjbqf1" path="res://assets/portrait/normal.png" id="3_ae71y"]
+[ext_resource type="Texture2D" uid="uid://c4yu4bruv0uuq" path="res://assets/portrait/blood.png" id="3_keyam"]
+[ext_resource type="Texture2D" uid="uid://dvet1lp4bpqp4" path="res://assets/ui-elements/token-hover.png" id="4_2au66"]
+[ext_resource type="Texture2D" uid="uid://ciaikqjpag3j" path="res://assets/portrait/selected.png" id="4_gqbw4"]
+[ext_resource type="Texture2D" uid="uid://klwed550mk4j" path="res://assets/portrait/hover.png" id="5_7dyt4"]
+[ext_resource type="FontFile" uid="uid://cf86taq84sp40" path="res://assets/themes/Pangolin-Regular.ttf" id="9_hdd05"]
+[ext_resource type="Script" path="res://scripts/portrait/portrait_button.gd" id="9_xw2ay"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cvx6k"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v5mpt"]
+texture = ExtResource("4_2au66")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_syq4e"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_adwrx"]
+texture = ExtResource("3_3y2a3")
+
+[sub_resource type="Theme" id="Theme_huwe6"]
+default_font = ExtResource("9_hdd05")
+Button/styles/disabled = null
+Button/styles/focus = SubResource("StyleBoxEmpty_cvx6k")
+Button/styles/hover = SubResource("StyleBoxTexture_v5mpt")
+Button/styles/normal = SubResource("StyleBoxEmpty_syq4e")
+Button/styles/pressed = SubResource("StyleBoxTexture_adwrx")
+Label/colors/font_outline_color = Color(0, 0, 0, 1)
+Label/constants/outline_size = 16
+Label/font_sizes/font_size = 32
+
+[node name="Portrait" type="TextureRect" groups=["Portrait"]]
+texture_filter = 1
+texture = ExtResource("1_dvelo")
+script = ExtResource("2_5m78l")
+
+[node name="Image" type="TextureRect" parent="."]
+texture_filter = 1
+custom_minimum_size = Vector2(192, 256)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+expand_mode = 4
+
+[node name="Control" type="Control" parent="."]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="HealthBar" type="TextureProgressBar" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = -112.0
+offset_right = 80.0
+offset_bottom = 112.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+max_value = 17.0
+value = 17.0
+fill_mode = 2
+texture_progress = ExtResource("3_keyam")
+
+[node name="StandardOutline" type="TextureRect" parent="Control"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -96.0
+offset_top = -128.0
+offset_right = 96.0
+offset_bottom = 128.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("3_ae71y")
+
+[node name="HoverOutline" type="TextureRect" parent="Control"]
+visible = false
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -96.0
+offset_top = -128.0
+offset_right = 96.0
+offset_bottom = 128.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("5_7dyt4")
+
+[node name="SelectOutline" type="TextureRect" parent="Control"]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_right = 192.0
+offset_bottom = 256.0
+mouse_filter = 2
+texture = ExtResource("4_gqbw4")
+
+[node name="NamePlate" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 21.0
+offset_top = -52.0
+offset_right = 104.0
+offset_bottom = -9.0
+grow_vertical = 0
+theme = SubResource("Theme_huwe6")
+text = "XX/XX"
+
+[node name="Button" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+disabled = true
+toggle_mode = true
+script = ExtResource("9_xw2ay")
+metadata/_edit_lock_ = true
+
+[connection signal="gui_input" from="Button" to="Button" method="_on_gui_input"]
+[connection signal="mouse_entered" from="Button" to="Button" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Button" to="Button" method="_on_mouse_exited"]
+[connection signal="toggled" from="Button" to="Button" method="_on_toggled"]

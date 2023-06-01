@@ -1,9 +1,9 @@
 [gd_resource type="Theme" load_steps=9 format=3 uid="uid://depbnjkuectom"]
 
 [ext_resource type="FontFile" uid="uid://cf86taq84sp40" path="res://assets/themes/Pangolin-Regular.ttf" id="1_ktiqj"]
-[ext_resource type="Texture2D" uid="uid://6r6on0y6rkji" path="res://assets/ui-elements/portraits/portrait-hover.png" id="1_wd2kl"]
-[ext_resource type="Texture2D" uid="uid://dxufdm7re0txo" path="res://assets/ui-elements/portraits/portrait-normal.png" id="2_0dnua"]
-[ext_resource type="Texture2D" uid="uid://ignbgwfcmaip" path="res://assets/ui-elements/portraits/portrait-select.png" id="3_jfmkd"]
+[ext_resource type="Texture2D" uid="uid://6r6on0y6rkji" path="res://archive/assets/portraits/portrait-hover.png" id="1_wd2kl"]
+[ext_resource type="Texture2D" uid="uid://dxufdm7re0txo" path="res://archive/assets/portraits/portrait-normal.png" id="2_0dnua"]
+[ext_resource type="Texture2D" uid="uid://ignbgwfcmaip" path="res://archive/assets/portraits/portrait-select.png" id="3_jfmkd"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cvx6k"]
 

@@ -12,23 +12,19 @@ extends Resource
 @export var character_class:= GLOBALS.Class.CLERIC
 
 @export var size:= GLOBALS.Size.MEDIUM
-@export var key_ability:= 0
+@export var key_ability:= GLOBALS.Ability.STRENGTH
 
 @export var languages: Array[String] = ["Common"]
 
 @export var speed:= 5
 
-@export var hp_max:= 10
-@export var hp_cur:= 10
+@export var hp_formula: HP_Formula = HP_Formula.new()
+
+@export var hp_max: int = hp_formula.ancestry_hp + hp_formula.bonus_hp + ((hp_formula.class_hp + hp_formula.bonus_hp_per_level + floor(ability_modifier.constution)) * level)
+@export var hp_cur:= hp_max
 @export var hp_temp:= 0
 
-
-@export var abil_str:= 0.0
-@export var abil_dex:= 0.0
-@export var abil_con:= 0.0
-@export var abil_int:= 0.0
-@export var abil_wis:= 0.0
-@export var abil_cha:= 0.0
+@export var ability_modifier: Ability_Score = Ability_Score.new()
 
 @export var proficiencies: Resource
 @export var feats: Resource

@@ -1,0 +1,26 @@
+[gd_resource type="Theme" load_steps=8 format=3 uid="uid://bfc3syk5qierl"]
+
+[ext_resource type="Texture2D" uid="uid://dvet1lp4bpqp4" path="res://assets/ui-elements/token-hover.png" id="1_u7ivl"]
+[ext_resource type="Texture2D" uid="uid://bodjxrtt541de" path="res://assets/ui-elements/token-select.png" id="2_0m5bq"]
+[ext_resource type="FontFile" uid="uid://cf86taq84sp40" path="res://assets/themes/Pangolin-Regular.ttf" id="3_5hlc7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cvx6k"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v5mpt"]
+texture = ExtResource("1_u7ivl")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_syq4e"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_adwrx"]
+texture = ExtResource("2_0m5bq")
+
+[resource]
+default_font = ExtResource("3_5hlc7")
+Button/styles/disabled = null
+Button/styles/focus = SubResource("StyleBoxEmpty_cvx6k")
+Button/styles/hover = SubResource("StyleBoxTexture_v5mpt")
+Button/styles/normal = SubResource("StyleBoxEmpty_syq4e")
+Button/styles/pressed = SubResource("StyleBoxTexture_adwrx")
+Label/colors/font_outline_color = Color(0, 0, 0, 1)
+Label/constants/outline_size = 8
+Label/font_sizes/font_size = 32

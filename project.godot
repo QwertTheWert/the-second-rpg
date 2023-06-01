@@ -18,6 +18,11 @@ config/icon="res://icon.svg"
 [autoload]
 
 Globals="*res://scripts/GLOBALS.gd"
+Dice="*res://scripts/DICE.gd"
+
+[debug]
+
+gdscript/warnings/integer_division=0
 
 [input]
 

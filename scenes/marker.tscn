@@ -1,15 +1,23 @@
-[gd_scene load_steps=3 format=3 uid="uid://b40selp451c3i"]
+[gd_scene load_steps=4 format=3 uid="uid://b40selp451c3i"]
 
-[ext_resource type="Texture2D" uid="uid://0sfvxtq4vt7w" path="res://assets/ui-elements/marker.png" id="1_fc0d4"]
+[ext_resource type="Texture2D" uid="uid://0sfvxtq4vt7w" path="res://assets/ui-elements/token/marker-unselected.png" id="1_ynq07"]
+[ext_resource type="Texture2D" uid="uid://c2c8oy0fw5awp" path="res://assets/ui-elements/token/marker-selected.png" id="2_vmv16"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d2ptp"]
 size = Vector2(32, 32)
 
-[node name="Marker" type="Area2D" groups=["Marker", "Token"]]
+[node name="Marker" type="Area2D" groups=["Marker"]]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="UnselectedSprite" type="Sprite2D" parent="."]
+texture_filter = 1
 scale = Vector2(0.25, 0.25)
-texture = ExtResource("1_fc0d4")
+texture = ExtResource("1_ynq07")
+
+[node name="SelectedSprite" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_vmv16")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_d2ptp")

@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Floor_Data" load_steps=2 format=3 uid="uid://ei3d6t247pt4"]
 
-[ext_resource type="Script" path="res://scripts/floor_data.gd" id="1_8v6yx"]
+[ext_resource type="Script" path="res://scripts/data/floor_data.gd" id="1_8v6yx"]
 
 [resource]
 script = ExtResource("1_8v6yx")

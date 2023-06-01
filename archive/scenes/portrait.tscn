@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cw4n5f6q8rhaa"]
 
 [ext_resource type="Script" path="res://archive/scripts/portrait.gd" id="2_dst0n"]
-[ext_resource type="Texture2D" uid="uid://8cjnpyhfme1x" path="res://assets/ui-elements/portraits/fill-up-hp-bar.png" id="2_fmifb"]
+[ext_resource type="Texture2D" uid="uid://8cjnpyhfme1x" path="res://assets/portrait/blood.png" id="2_fmifb"]
 [ext_resource type="Theme" uid="uid://depbnjkuectom" path="res://assets/themes/portrait.tres" id="3_27usx"]
 
 [node name="Portrait" type="TextureRect" groups=["Portrait"]]

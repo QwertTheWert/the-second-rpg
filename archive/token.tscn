@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://cvp0l1ko3jmjy"]
 
 [ext_resource type="Script" path="res://archive/token.gd" id="1_p3ebf"]
-[ext_resource type="Theme" uid="uid://bfc3syk5qierl" path="res://assets/themes/token.tres" id="2_jvhwd"]
+[ext_resource type="Theme" uid="uid://bfc3syk5qierl" path="res://resource/themes/token.tres" id="2_jvhwd"]
 [ext_resource type="Texture2D" uid="uid://x6yjkonm2bpd" path="res://assets/ui-elements/token-health-bar-under.png" id="3_iiran"]
 [ext_resource type="Texture2D" uid="uid://2lvytcx2qhfg" path="res://assets/ui-elements/token-health-bar-progress.png" id="4_jryu2"]
 [ext_resource type="Texture2D" uid="uid://dda1ce6fiib7x" path="res://assets/ui-elements/token-temp-health-bar-progress.png" id="5_0svgt"]

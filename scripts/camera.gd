@@ -9,6 +9,7 @@ var mouse_pan_limit: int = 2
 
 
 @onready var screen_size = DisplayServer.window_get_size()
+@onready var _grid = get_tree().root.get_node("Main/Grid")
 
 func _ready() -> void:
 #	position = screen_size/2
@@ -28,21 +29,21 @@ func _process(delta)-> void:
 	if Input.is_action_pressed("camera_up"):
 		velocity.y -= 1
 	
-	var mouse_pos = get_viewport().get_mouse_position()
-	if mouse_pos.x > screen_size.x - mouse_pan_limit:
-		velocity.x += 1
-	if mouse_pos.x < mouse_pan_limit:
-		velocity.x -= 1
-	if mouse_pos.y > screen_size.y - mouse_pan_limit:
-		velocity.y += 1
-	if mouse_pos.y < mouse_pan_limit:
-		velocity.y -= 1
+#	var mouse_pos = get_viewport().get_mouse_position()
+#	if mouse_pos.x > screen_size.x - mouse_pan_limit:
+#		velocity.x += 1
+#	if mouse_pos.x < mouse_pan_limit:
+#		velocity.x -= 1
+#	if mouse_pos.y > screen_size.y - mouse_pan_limit:
+#		velocity.y += 1
+#	if mouse_pos.y < mouse_pan_limit:
+#		velocity.y -= 1
 	
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed
 #
 	position += velocity / zoom * delta
-	position = Vector2(clamp(position.x, 0, screen_size.x), clamp(position.y, 0, screen_size.y))
+	position = Vector2(clamp(position.x, 0, _grid.width * _grid.cell_size), clamp(position.y, 0, _grid.height * _grid.cell_size))
 
 func _input(event) -> void:
 	if event is InputEventMouseMotion and Input.is_mouse_button_pressed(MOUSE_BUTTON_MIDDLE):
