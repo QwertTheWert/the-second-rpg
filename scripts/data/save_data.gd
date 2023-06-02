@@ -12,7 +12,7 @@ const CHARACTERS_FOLDER_PATH = "user://save_files/characters/"
 
 @export var map_name := ""
 @export var global_position := Vector2.ZERO
-@export var GAMEMODE := GLOBALS.Mode.ENCOUNTER
+@export var gamemode := Global.Gamemode.ENCOUNTER
 
 func write_save_data() -> void:
 	ResourceSaver.save(self, SAVE_GAME_PATH)

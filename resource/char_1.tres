@@ -1,14 +1,27 @@
-[gd_resource type="Resource" script_class="Character_Data" load_steps=4 format=3 uid="uid://cr5r2xr1hek6x"]
+[gd_resource type="Resource" script_class="Character_Data" load_steps=6 format=3 uid="uid://cr5r2xr1hek6x"]
 
 [ext_resource type="Script" path="res://scripts/data/character_data.gd" id="1_6rdxg"]
-[ext_resource type="Script" path="res://scripts/data/character_element/hp_formula.gd" id="1_wjbou"]
+[ext_resource type="Script" path="res://scripts/data/character_element/ability_modifiers.gd" id="1_vle3k"]
+[ext_resource type="Script" path="res://scripts/data/character_element/hit_points.gd" id="2_6xdvc"]
 
-[sub_resource type="Resource" id="Resource_6vkla"]
-script = ExtResource("1_wjbou")
+[sub_resource type="Resource" id="Resource_goqxo"]
+script = ExtResource("1_vle3k")
+strength = 0.0
+dexterity = 0.0
+constitution = 2.0
+intelligence = 0.0
+wisdom = 0.0
+charisma = 0.0
+
+[sub_resource type="Resource" id="Resource_nqyey"]
+script = ExtResource("2_6xdvc")
 ancestry_hp = 8
 class_hp = 10
 bonus_hp = 0
 bonus_hp_per_level = 0
+max_hp = 0
+current_hp = 20
+temp_hp = 0
 
 [resource]
 script = ExtResource("1_6rdxg")
@@ -17,40 +30,14 @@ name = "Vasha"
 image_path = "res://assets/character/vasha"
 level = 1
 experience = 0
-ancestry = {
-"DWARF": 0,
-"ELF": 1,
-"GNOME": 2,
-"HALFLING": 3,
-"HUMAN": 4,
-"ORC": 5
-}
-heritage = {
-"HERITAGE_1": 0,
-"HERITAGE_2": 1
-}
-background = {
-"BACKGROUND_1": 0,
-"BACKGROUND_2": 1
-}
-character_class = {
-"CLERIC": 0,
-"FIGHTER": 1,
-"ROGUE": 2,
-"WIZARD": 3
-}
+ancestry = 4
+heritage = 0
+background = 0
+character_class = 0
 size = 2
+ability_modifier = SubResource("Resource_goqxo")
 key_ability = 0
 languages = Array[String](["Common"])
 speed = 5
-hp_formula = SubResource("Resource_6vkla")
-hp_max = null
-hp_cur = null
-hp_temp = 0
-abil_str = 0.0
-abil_dex = 0.0
-abil_con = 0.0
-abil_int = 0.0
-abil_wis = 0.0
-abil_cha = 0.0
+hit_points = SubResource("Resource_nqyey")
 map_position = Vector2i(2, 3)

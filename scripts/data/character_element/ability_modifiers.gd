@@ -1,4 +1,4 @@
-class_name Ability_Modifier
+class_name Ability_Modifiers
 extends Resource
 
 @export var strength:= 0.0

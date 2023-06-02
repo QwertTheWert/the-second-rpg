@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="Character_Data" load_steps=2 format=3 uid="uid://b7e8o3tyxxgtl"]
+
+[ext_resource type="Script" path="res://scripts/data/character_data.gd" id="1_w2jai"]
+
+[resource]
+script = ExtResource("1_w2jai")
+id = 0
+name = "Default"
+image_path = ""
+level = 1
+experience = 0
+ancestry = 4
+heritage = 0
+background = 0
+character_class = 0
+size = 2
+key_ability = 0
+languages = Array[String](["Common"])
+speed = 5
+hp_max = null
+hp_cur = null
+hp_temp = 0
+map_position = Vector2i(0, 0)

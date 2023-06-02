@@ -1,38 +1,39 @@
+class_name DICE
 extends Node
 
 
-func d4(amount):
+func D4(amount):
 	var rolls = []
 	for i in amount:
 		rolls.append(randi_range(1,4))
 	return rolls
 
-func d6(amount):
+func D6(amount):
 	var rolls = []
 	for i in amount:
 		rolls.append(randi_range(1,6))
 	return rolls
 
-func d8(amount):
+func D8(amount):
 	var rolls = []
 	for i in amount:
 		rolls.append(randi_range(1,8))
 	return rolls
 
-func d10(amount):
+func D10(amount):
 	var rolls = []
 	for i in amount:
 		rolls.append(randi_range(1,10))
 	return rolls
 
 
-func d12(amount):
+func D12(amount):
 	var rolls = []
 	for i in amount:
 		rolls.append(randi_range(1,12))
 	return rolls
 
-func d20(amount):
+func D20(amount):
 	var rolls = []
 	for i in amount:
 		rolls.append(randi_range(1,20))

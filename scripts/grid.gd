@@ -26,8 +26,8 @@ func calculate_bounds() -> void:
 func generate_grid():
 	for x in width:
 		for y in height:
-			grid[Vector2i(x,y)] = Cell_Data.new(Vector2i(x,y))
-			grid[Vector2i(x,y)].floor_data = preload("res://data/ground.tres")
+#			grid[Vector2i(x,y)] = Cell_Data.new(Vector2i(x,y))
+#			grid[Vector2i(x,y)].floor_data = preload("res://data/ground.tres")
 #			refresh_tile(Vector2i(x,y))
 			
 			#Debug Grid
@@ -50,7 +50,7 @@ func _map_input_event(_viewport, event, _shape_idx) -> void:
 				group_march(_mouse_pos)
 				
 				
-	if event is InputEventMouseMotion and _main.gamemode == GLOBALS.Mode.ENCOUNTER:
+	if event is InputEventMouseMotion and _main.gamemode == Global.Gamemode.ENCOUNTER:
 		if _main.selected_character.size() == 1:
 			if $Tokens.get_node(_main.selected_character[0]).path.size() < 1:
 				$Tokens.get_node(_main.selected_character[0])._draw_ruler()

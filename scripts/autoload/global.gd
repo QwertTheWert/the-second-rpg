@@ -1,21 +1,24 @@
-class_name Main
-extends Node2D
+#class_name Global
+extends Node
 
-@onready var _grid = $Grid
-@onready var _tokens = $Grid/Tokens
-@onready var _portraits = $CanvasLayer/Portraits
+enum Ancestries { DWARF, ELF, GNOME, HALFLING, HUMAN, ORC }
+enum Heritages { HERITAGE_1, HERITAGE_2 }
+enum Backgrounds { BACKGROUND_1, BACKGROUND_2 }
+enum Classes { CLERIC, FIGHTER, ROGUE, WIZARD }
+enum Abilities { STRENGTH, DEXTERITY, CONSTITUTION, INTELLIGENCE, WISDOM, CHARISMA }
+enum Size { TINY, SMALL, MEDIUM, LARGE, HUGE, GARGANTUAN }
+enum Gamemode { EXPLORATION, ENCOUNTER }
+enum Prof_Rank { UNTRAINED=0, TRAINED=2, EXPERT=4, MASTER=6, LEGENDARY=8 }
+
+@onready var gamemode : Global.Gamemode
+
+var save: Save_Data
 var selected_character: Array[String]
 var is_paused:= false
 var is_shifted:= false
 
 func _ready():
 	_create_or_load_save()
-	_grid.calculate_bounds()
-	_grid.generate_grid()
-	_grid.generate_area()
-	_tokens.generate_tokens()
-	_portraits.generate_portraits()
-	
 	
 func _input(event):
 	if event is InputEventKey:

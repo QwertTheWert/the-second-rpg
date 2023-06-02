@@ -15,7 +15,7 @@ func _on_gui_input(event):
 
 
 func _on_pressed():
-	if  _main.gamemode == GLOBALS.Mode.EXPLORATION:
+	if  _main.gamemode == Global.Gamemode.EXPLORATION:
 		if (not _main.is_shifted):
 			var reselect = _token.tokens.more_than_one_character_selected()
 			get_tree().call_group("Character", "unselect", _token.name)

@@ -2,8 +2,6 @@ class_name Pathfinder
 extends Node
 
 var aStar = AStarGrid2D.new()
-#@onready var _main = get_tree().root.get_node("Main")
-#@onready var _grid: Grid = _main.get_node("Grid")
 
 var move_speed: float = 5.0
 

@@ -17,8 +17,8 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Globals="*res://scripts/GLOBALS.gd"
-Dice="*res://scripts/DICE.gd"
+Dice="*res://scripts/autoload/DICE.gd"
+Global="*res://scripts/autoload/global.gd"
 
 [debug]
 

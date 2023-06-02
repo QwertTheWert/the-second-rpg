@@ -36,8 +36,8 @@ var pos: Vector2i :
 
 func _ready():
 	pos = _grid.local_to_map(position)
-	$Control/HealthBar.max_value = character_data.hp_max
-	$Control/HealthBar.value = character_data.hp_cur
+	$Control/HealthBar.max_value = character_data.hit_points.max_hp
+	$Control/HealthBar.value = character_data.hit_points.current_hp
 	_create_marker()
 
 func _process(delta):
@@ -51,15 +51,16 @@ func _move(delta):
 			path.pop_front()
 			if path.size() == 0:
 				marker.hide()
+				character_data.map_position = pos
 		else:
-			if _main.gamemode == GLOBALS.Mode.EXPLORATION:
+			if _main.gamemode == Global.Gamemode.EXPLORATION:
 				position += (_grid.map_to_local(path[0]) - position).normalized() * _EXPLORATION_MOVE_SPEED * delta
 			else:
 				position += (_grid.map_to_local(path[0]) - position).normalized() * _ENCOUNTER_MOVE_SPEED * delta
 
 func _limit_path(_path: Array[Vector2i]):
 	_movement_used = 0
-	if _path.size() > 0 and _main.gamemode == GLOBALS.Mode.ENCOUNTER:
+	if _path.size() > 0 and _main.gamemode == Global.Gamemode.ENCOUNTER:
 		path.append(_path[0])
 		for i in _path.size()-1:
 			var d = abs(_path[i] - _path[i+1])
@@ -145,11 +146,11 @@ func unselect(_name)-> void:
 #		selection_status_changed.emit(false, character_data)
 
 func _update_hp_bar():
-	$Control/HealthBar.max_value = character_data.hp_max
+	$Control/HealthBar.max_value = character_data.hit_points.max_hp
 	var tween = get_tree().create_tween().bind_node(self).set_trans(Tween.TRANS_LINEAR)
-	tween.tween_property($Control/HealthBar, "value", character_data.hp_cur, 0.1)
+	tween.tween_property($Control/HealthBar, "value", character_data.hit_points.current_hp, 0.1)
 
 func change_hp(_value: int):
 	if _main.selected_character.has(name):
-		character_data.hp_cur = clamp(character_data.hp_cur - _value, 0, character_data.hp_max)
+		character_data.hit_points.current_hp = clamp(character_data.hit_points.current_hp - _value, 0, character_data.hit_points.max_hp)
 		_update_hp_bar()

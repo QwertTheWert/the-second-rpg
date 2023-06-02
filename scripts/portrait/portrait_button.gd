@@ -10,7 +10,7 @@ func _on_gui_input(event):
 			button_pressed = !button_pressed
 			_on_pressed()
 func _on_pressed():
-	if  _main.gamemode == GLOBALS.Mode.EXPLORATION:
+	if  _main.gamemode == Global.Gamemode.EXPLORATION:
 		if (not _main.is_shifted):
 			var reselect = _portrait.portraits.more_than_one_character_selected()
 			get_tree().call_group("Portrait", "unselect", _portrait.name)

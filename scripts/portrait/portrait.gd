@@ -14,9 +14,9 @@ var character_data: Character_Data: #setget
 
 
 func _ready():
-	$Control/HealthBar.max_value = character_data.hp_max
-	$Control/HealthBar.value = character_data.hp_max - character_data.hp_cur
-	$Control/NamePlate.text = "%s/%s" % [character_data.hp_cur, character_data.hp_max]
+	$Control/HealthBar.max_value = character_data.hit_points.max_hp
+	$Control/HealthBar.value = character_data.hit_points.max_hp - character_data.hit_points.current_hp
+	$Control/NamePlate.text = "%s/%s" % [character_data.hit_points.current_hp, character_data.hit_points.max_hp]
 
 func unselect(_name) -> void:
 	if _name != name:
@@ -27,9 +27,9 @@ func unselect(_name) -> void:
 
 func _update_hp_bar():
 	var tween = get_tree().create_tween().bind_node(self).set_trans(Tween.TRANS_LINEAR)
-	tween.tween_property($Control/HealthBar, "value", character_data.hp_max - character_data.hp_cur, 0.1)
-	$Control/HealthBar.max_value = character_data.hp_max
-	$Control/NamePlate.text = "%s/%s" % [character_data.hp_cur, character_data.hp_max]
+	tween.tween_property($Control/HealthBar, "value", character_data.hit_points.max_hp - character_data.hit_points.current_hp, 0.1)
+	$Control/HealthBar.max_value = character_data.hit_points.max_hp
+	$Control/NamePlate.text = "%s/%s" % [character_data.hit_points.current_hp, character_data.hit_points.max_hp]
 
 func change_hp(_value: int):
 	if _main.selected_character.has(name):

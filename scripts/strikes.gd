@@ -9,7 +9,6 @@ func set_data():
 		$"../Button2".show()
 		$"../Button3".show()
 		$"../Button4".show()
-#		print([pass])
 	elif _main.selected_character.size() == 0:
 		$".".hide()
 		$"../Button2".hide()
