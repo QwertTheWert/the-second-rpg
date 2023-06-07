@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="The Second RPG"
-run/main_scene="res://scenes/Main/main.tscn"
+run/main_scene="res://scenes/CharacterBuilder/CharacterBuilder.tscn"
 config/features=PackedStringArray("4.0", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -23,6 +23,11 @@ Global="*res://scripts/autoload/global.gd"
 [debug]
 
 gdscript/warnings/integer_division=0
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
 
 [input]
 
@@ -54,4 +59,5 @@ left_click={
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="mobile"

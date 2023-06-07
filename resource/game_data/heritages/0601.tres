@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Heritage_Data" load_steps=2 format=3 uid="uid://boyivt1x51fsd"]
+
+[ext_resource type="Script" path="res://scripts/data/heritage_data.gd" id="1_aw4po"]
+
+[resource]
+script = ExtResource("1_aw4po")
+id = "0601"
+name = "Deep Orc"
+abilities = []
+variants = Array[ExtResource("1_aw4po")]([])
+is_variant = false
+text = "Your calloused hands and red eyes speak to a life spent in the deep darkness of mountain caverns, where you learned to battle on rocky cliffs and survive with minimal resources. You gain the Terrain Expertise skill feat for underground terrain and the Combat Climber skill feat."

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Background_Data" load_steps=2 format=3 uid="uid://budx53rp8p7ej"]
+
+[ext_resource type="Script" path="res://scripts/data/background_data.gd" id="1_hte6w"]
+
+[resource]
+script = ExtResource("1_hte6w")
+id = "17"
+name = "Herbalist"
+attribute_boost = Array[int]([2, 4])
+skill = 9
+text = "As a formally trained apothecary or a rural practitioner of folk medicine, you learned the healing properties of various herbs. You’re adept at collecting the right natural cures in all sorts of environments and preparing them properly."

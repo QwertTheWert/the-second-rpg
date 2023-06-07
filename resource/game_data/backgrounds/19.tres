@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Background_Data" load_steps=2 format=3 uid="uid://bwfa2epuu3rn8"]
+
+[ext_resource type="Script" path="res://scripts/data/background_data.gd" id="1_fhlg5"]
+
+[resource]
+script = ExtResource("1_fhlg5")
+id = "19"
+name = "Laborer"
+attribute_boost = Array[int]([0, 2])
+skill = 2
+text = "You’ve spent years performing arduous physical labor. It was a difficult life, but you somehow survived. You may have embraced adventuring as an easier method to make your way in the world, or you might adventure under someone else’s command."

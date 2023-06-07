@@ -1,7 +1,6 @@
 class_name Texture_Button
 extends TextureButton
 
-@onready var _main = get_tree().root.get_node("Main") 
 @onready var _portrait = get_parent()
 
 func _on_gui_input(event):
@@ -10,13 +9,13 @@ func _on_gui_input(event):
 			button_pressed = !button_pressed
 			_on_pressed()
 func _on_pressed():
-	if  _main.gamemode == Global.Gamemode.EXPLORATION:
-		if (not _main.is_shifted):
+	if  Global.gamemode == Global.Gamemode.EXPLORATION:
+		if (not Global.is_shifted):
 			var reselect = _portrait.portraits.more_than_one_character_selected()
 			get_tree().call_group("Portrait", "unselect", _portrait.name)
 			if reselect:
 				button_pressed = true
-			_main.selected_character.erase(_portrait.name)
+			Global.selected_character.erase(_portrait.name)
 	else:
 		get_tree().call_group("Portrait", "unselect", _portrait.name)
 	
@@ -36,9 +35,9 @@ func _on_mouse_exited():
 func _on_toggled(_button_pressed):
 	if button_pressed:
 		$"../Control/SelectOutline".show()
-		if not _main.selected_character.has(_portrait.name):
-			_main.selected_character.append(_portrait.name)
+		if not Global.selected_character.has(_portrait.name):
+			Global.selected_character.append(_portrait.name)
 	else:
 		$"../Control/SelectOutline".hide()
-		_main.selected_character.erase(_portrait.name)
+		Global.selected_character.erase(_portrait.name)
 		

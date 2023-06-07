@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Background_Data" load_steps=2 format=3 uid="uid://bm1s4che3ujm3"]
+
+[ext_resource type="Script" path="res://scripts/data/background_data.gd" id="1_73ay0"]
+
+[resource]
+script = ExtResource("1_73ay0")
+id = "22"
+name = "Martial Disciple (Athletics)"
+attribute_boost = Array[int]([0, 1])
+skill = 2
+variants = Array[ExtResource("1_73ay0")]([])
+is_variant = true
+text = "You dedicated yourself to intense training and rigorous study to become a great warrior. The school you attended might have been a traditionalist monastery, an elite military academy, or the local branch of a prestigious mercenary organization."

@@ -22,7 +22,7 @@ func unselect(_name) -> void:
 	if _name != name:
 		$Button.button_pressed = false
 		$Control/SelectOutline.hide()
-		_main.selected_character.erase(name)
+		Global.selected_character.erase(name)
 
 
 func _update_hp_bar():
@@ -32,7 +32,7 @@ func _update_hp_bar():
 	$Control/NamePlate.text = "%s/%s" % [character_data.hit_points.current_hp, character_data.hit_points.max_hp]
 
 func change_hp(_value: int):
-	if _main.selected_character.has(name):
+	if Global.selected_character.has(name):
 		_update_hp_bar()
 
 func _get_drag_data(_pos):

@@ -41,7 +41,7 @@ func _ready():
 	_create_marker()
 
 func _process(delta):
-	if not _main.is_paused: _move(delta)
+	if not Global.is_paused: _move(delta)
 
 func _move(delta):
 	if path.size() > 0:
@@ -53,14 +53,14 @@ func _move(delta):
 				marker.hide()
 				character_data.map_position = pos
 		else:
-			if _main.gamemode == Global.Gamemode.EXPLORATION:
+			if Global.gamemode == Global.Gamemode.EXPLORATION:
 				position += (_grid.map_to_local(path[0]) - position).normalized() * _EXPLORATION_MOVE_SPEED * delta
 			else:
 				position += (_grid.map_to_local(path[0]) - position).normalized() * _ENCOUNTER_MOVE_SPEED * delta
 
 func _limit_path(_path: Array[Vector2i]):
 	_movement_used = 0
-	if _path.size() > 0 and _main.gamemode == Global.Gamemode.ENCOUNTER:
+	if _path.size() > 0 and Global.gamemode == Global.Gamemode.ENCOUNTER:
 		path.append(_path[0])
 		for i in _path.size()-1:
 			var d = abs(_path[i] - _path[i+1])
@@ -142,7 +142,7 @@ func unselect(_name)-> void:
 		$Control/NamePlate.hide()
 		marker.get_node("SelectedSprite").hide()
 		marker.get_node("UnselectedSprite").show()
-		_main.selected_character.erase(name)
+		Global.selected_character.erase(name)
 #		selection_status_changed.emit(false, character_data)
 
 func _update_hp_bar():
@@ -151,6 +151,6 @@ func _update_hp_bar():
 	tween.tween_property($Control/HealthBar, "value", character_data.hit_points.current_hp, 0.1)
 
 func change_hp(_value: int):
-	if _main.selected_character.has(name):
+	if Global.selected_character.has(name):
 		character_data.hit_points.current_hp = clamp(character_data.hit_points.current_hp - _value, 0, character_data.hit_points.max_hp)
 		_update_hp_bar()

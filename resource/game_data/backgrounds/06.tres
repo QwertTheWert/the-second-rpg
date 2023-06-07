@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Background_Data" load_steps=2 format=3 uid="uid://bpnt4neokanym"]
+
+[ext_resource type="Script" path="res://scripts/data/background_data.gd" id="1_in2ah"]
+
+[resource]
+script = ExtResource("1_in2ah")
+id = "06"
+name = "Charlatan"
+attribute_boost = Array[int]([3, 5])
+skill = 4
+text = "You traveled from place to place, peddling false fortunes and snake oil in one town, pretending to be royalty in exile to seduce a wealthy heir in the next. Becoming an adventurer might be your next big scam or an attempt to put your talents to use for a greater cause. Perhaps it’s a bit of both, as you realize that after pretending to be a hero, you’ve become the mask."

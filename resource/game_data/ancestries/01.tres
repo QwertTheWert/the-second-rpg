@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Ancestry_Data" load_steps=5 format=3 uid="uid://d02jap8enrs44"]
+
+[ext_resource type="Resource" uid="uid://co7d601ydaot" path="res://resource/game_data/heritages/0102.tres" id="2_fiww1"]
+[ext_resource type="Resource" uid="uid://dshq4xy00bpv3" path="res://resource/game_data/heritages/0101.tres" id="3_5vsi6"]
+[ext_resource type="Resource" uid="uid://da75r0eq6i7n7" path="res://resource/game_data/heritages/0103.tres" id="4_as3aq"]
+[ext_resource type="Script" path="res://scripts/data/ancestry_data.gd" id="5_7axqf"]
+
+[resource]
+script = ExtResource("5_7axqf")
+name = "Elf"
+traits = Array[String](["Elf", "Humanoid"])
+heritages = Array[Resource("res://scripts/data/heritage_data.gd")]([ExtResource("3_5vsi6"), ExtResource("2_fiww1"), ExtResource("3_5vsi6"), ExtResource("4_as3aq")])
+attribute_boost = Array[int]([1, 3])
+attribute_flaw = Array[int]([2])
+size = 2
+ancestry_hp = 6
+speed = 6
+abilities = []
+text = "As an ancient people, elves have seen great change and have the perspective that can come only from watching the arc of history. After leaving the world in ancient times, they returned to a changed land, and they still struggle to reclaim their ancestral homes, most notably from terrible demons that have invaded parts of their lands. To some, the elves are objects of awe—graceful and beautiful, with immense talent and knowledge. Among themselves, however, the elves place far more importance on personal freedom than on living up to these ideals."

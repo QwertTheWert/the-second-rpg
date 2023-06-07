@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Background_Data" load_steps=2 format=3 uid="uid://baj5jyg6mme7f"]
+
+[ext_resource type="Script" path="res://scripts/data/background_data.gd" id="1_5vep4"]
+
+[resource]
+script = ExtResource("1_5vep4")
+id = "14"
+name = "Gambler"
+attribute_boost = Array[int]([1, 5])
+skill = 4
+text = "The thrill of the win drew you into games of chance. This might have been a lucrative sideline that paled in comparison to the real risks of adventuring, or you might have fallen on hard times due to your gambling and pursued adventuring as a way out of a spiral."

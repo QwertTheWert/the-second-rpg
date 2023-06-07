@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Background_Data" load_steps=2 format=3 uid="uid://m86acbkeot6e"]
+
+[ext_resource type="Script" path="res://scripts/data/background_data.gd" id="1_6y0hf"]
+
+[resource]
+script = ExtResource("1_6y0hf")
+id = "26"
+name = "Scholar (Occultism)"
+attribute_boost = Array[int]([3, 4])
+skill = 10
+variants = Array[ExtResource("1_6y0hf")]([])
+is_variant = true
+text = "You have a knack for learning, and sequestered yourself from the outside world to learn all you could. You read about so many wondrous places and things in your books, and always dreamed about one day seeing the real things. Eventually, that curiosity led you to leave your studies and become an adventurer."

@@ -1,7 +1,6 @@
 class_name Grid
 extends TileMap
 
-@onready var _main = get_tree().root.get_node("Main")
 @onready var _pf = $Pathfinding
 
 var width:= 0
@@ -44,22 +43,22 @@ func _map_input_event(_viewport, event, _shape_idx) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		if event.pressed == true:
 			var _mouse_pos = local_to_map(get_global_mouse_position())
-			if _main.selected_character.size() == 1:
-				$Tokens.get_node(_main.selected_character[0])._pathfind_to_position(_mouse_pos)
-			elif _main.selected_character.size() > 1:
+			if Global.selected_character.size() == 1:
+				$Tokens.get_node(Global.selected_character[0])._pathfind_to_position(_mouse_pos)
+			elif Global.selected_character.size() > 1:
 				group_march(_mouse_pos)
 				
 				
-	if event is InputEventMouseMotion and _main.gamemode == Global.Gamemode.ENCOUNTER:
-		if _main.selected_character.size() == 1:
-			if $Tokens.get_node(_main.selected_character[0]).path.size() < 1:
-				$Tokens.get_node(_main.selected_character[0])._draw_ruler()
+	if event is InputEventMouseMotion and Global.gamemode == Global.Gamemode.ENCOUNTER:
+		if Global.selected_character.size() == 1:
+			if $Tokens.get_node(Global.selected_character[0]).path.size() < 1:
+				$Tokens.get_node(Global.selected_character[0])._draw_ruler()
 
 func group_march(_mouse_pos: Vector2i):
-	_main.selected_character.sort_custom(sort_march_order)
-	if _main.selected_character.size() == 2:
-		var _token_1 = $Tokens.get_node(_main.selected_character[0])
-		var _token_2 = $Tokens.get_node(_main.selected_character[1])
+	Global.selected_character.sort_custom(sort_march_order)
+	if Global.selected_character.size() == 2:
+		var _token_1 = $Tokens.get_node(Global.selected_character[0])
+		var _token_2 = $Tokens.get_node(Global.selected_character[1])
 		var _check_right = bool(_pf.generate_path(_token_1.pos, _mouse_pos + Vector2i(1,0)).size())
 		var _check_left = bool(_pf.generate_path(_token_1.pos, _mouse_pos + Vector2i(-1,0)).size())
 		var _check_down = bool(_pf.generate_path(_token_1.pos, _mouse_pos + Vector2i(0,1)).size())
@@ -79,10 +78,10 @@ func group_march(_mouse_pos: Vector2i):
 		_token_2._pathfind_to_position(_mouse_pos + Vector2i(1,0))
 		return
 
-	if _main.selected_character.size() == 3:
-		var _token_1 = $Tokens.get_node(_main.selected_character[0])
-		var _token_2 = $Tokens.get_node(_main.selected_character[1])
-		var _token_3 = $Tokens.get_node(_main.selected_character[2])
+	if Global.selected_character.size() == 3:
+		var _token_1 = $Tokens.get_node(Global.selected_character[0])
+		var _token_2 = $Tokens.get_node(Global.selected_character[1])
+		var _token_3 = $Tokens.get_node(Global.selected_character[2])
 		var _check_right = bool(_pf.generate_path(_token_1.pos, _mouse_pos + Vector2i(1,0)).size())
 		var _check_left = bool(_pf.generate_path(_token_1.pos, _mouse_pos + Vector2i(-1,0)).size())
 		var _check_down = bool(_pf.generate_path(_token_1.pos, _mouse_pos + Vector2i(-1,0)).size())
@@ -138,11 +137,11 @@ func group_march(_mouse_pos: Vector2i):
 		_token_3._pathfind_to_position(_mouse_pos + Vector2i(0,1))
 		return
 
-	if _main.selected_character.size() == 4:
-		var _token_1 = $Tokens.get_node(_main.selected_character[0])
-		var _token_2 = $Tokens.get_node(_main.selected_character[1])
-		var _token_3 = $Tokens.get_node(_main.selected_character[2])
-		var _token_4 = $Tokens.get_node(_main.selected_character[3])
+	if Global.selected_character.size() == 4:
+		var _token_1 = $Tokens.get_node(Global.selected_character[0])
+		var _token_2 = $Tokens.get_node(Global.selected_character[1])
+		var _token_3 = $Tokens.get_node(Global.selected_character[2])
+		var _token_4 = $Tokens.get_node(Global.selected_character[3])
 		var _check_right = bool(_pf.generate_path(_token_1.pos, _mouse_pos + Vector2i(1,0)).size())
 		var _check_left = bool(_pf.generate_path(_token_1.pos, _mouse_pos + Vector2i(-1,0)).size())
 		var _check_down = bool(_pf.generate_path(_token_1.pos, _mouse_pos + Vector2i(0,1)).size())

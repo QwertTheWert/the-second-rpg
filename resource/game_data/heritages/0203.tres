@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Heritage_Data" load_steps=2 format=3 uid="uid://by6imap55tlwh"]
+
+[ext_resource type="Script" path="res://scripts/data/heritage_data.gd" id="1_q655m"]
+
+[resource]
+script = ExtResource("1_q655m")
+id = "0203"
+name = "Wellspring Gnome"
+abilities = []
+variants = Array[ExtResource("1_q655m")]([])
+is_variant = false
+text = ""

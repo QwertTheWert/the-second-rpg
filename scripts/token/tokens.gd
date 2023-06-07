@@ -34,7 +34,7 @@ func generate_tokens() -> void:
 		marching_order += 1
 
 func more_than_one_character_selected() -> bool:
-	if _main.selected_character.size() > 1:
+	if Global.selected_character.size() > 1:
 		return true
 	else:
 		return false

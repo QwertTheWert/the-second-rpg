@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Heritage_Data" load_steps=2 format=3 uid="uid://co7d601ydaot"]
+
+[ext_resource type="Script" path="res://scripts/data/heritage_data.gd" id="1_jii5r"]
+
+[resource]
+script = ExtResource("1_jii5r")
+id = "0102"
+name = "Seer Elf"
+abilities = []
+variants = Array[ExtResource("1_jii5r")]([])
+is_variant = false
+text = ""

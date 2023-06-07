@@ -1,11 +1,21 @@
 #class_name Global
 extends Node
 
-enum Ancestries { DWARF, ELF, GNOME, HALFLING, HUMAN, ORC }
-enum Heritages { HERITAGE_1, HERITAGE_2 }
-enum Backgrounds { BACKGROUND_1, BACKGROUND_2 }
+const HERITAGE_RESOURCE_PATH = "res://resource/game_data/heritages/"
+
+enum Skills { ACROBATICS, ARCANA, ATHLETICS, CRAFTING, DECEPTION, DIPLOMACY, 
+	INTIMIDATION, LORE, MEDICINE, NATURE, OCCULTISM, PERFORMANCE, RELIGION, SOCIETY,
+	STEALTH, SURVIVAL, THIEVERY }
+
+enum Saves { FORTITUDE, REFLEX, WILL }
+enum Armors { UNARMORED, LIGHT, MEDIUM, HEAVY }
+enum Weapons { UNARMED, SIMPLE, MARTIAL, ADVANCED }
 enum Classes { CLERIC, FIGHTER, ROGUE, WIZARD }
-enum Abilities { STRENGTH, DEXTERITY, CONSTITUTION, INTELLIGENCE, WISDOM, CHARISMA }
+
+enum Darksense { NORMAL, LOW_LIGHT_VISION, DARKVISION, GREATER_DARKVISION}
+
+enum Attributes { STRENGTH, DEXTERITY, CONSTITUTION, INTELLIGENCE, WISDOM, CHARISMA }
+
 enum Size { TINY, SMALL, MEDIUM, LARGE, HUGE, GARGANTUAN }
 enum Gamemode { EXPLORATION, ENCOUNTER }
 enum Prof_Rank { UNTRAINED=0, TRAINED=2, EXPERT=4, MASTER=6, LEGENDARY=8 }
@@ -14,6 +24,8 @@ enum Prof_Rank { UNTRAINED=0, TRAINED=2, EXPERT=4, MASTER=6, LEGENDARY=8 }
 
 var save: Save_Data
 var selected_character: Array[String]
+var ancestry_data: Array[Ancestry_Data]
+var heritage_data: Array[Heritage_Data]
 var is_paused:= false
 var is_shifted:= false
 
@@ -30,8 +42,6 @@ func _input(event):
 		if event.keycode == KEY_SPACE and event.pressed:
 			is_paused = not is_paused
 
-
-
 func _create_or_load_save() -> void:
 	if Save_Data.save_exists():
 		save = Save_Data.load_save_data() as Save_Data
@@ -42,11 +52,9 @@ func _create_or_load_save() -> void:
 		save.global_position = Vector2i(2,2)
 		
 		save.writesave_data()
-	
-	_tokens.characters = save.characters
-	_portraits.characters = save.characters
+		
 	gamemode = save.gamemode
-
+	
 func _load_characters():
 	var dir = DirAccess.open(save.CHARACTERS_FOLDER_PATH)
 	dir.list_dir_begin()

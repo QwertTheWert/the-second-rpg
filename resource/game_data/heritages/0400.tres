@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Heritage_Data" load_steps=2 format=3 uid="uid://d27hc3tew3hgm"]
+
+[ext_resource type="Script" path="res://scripts/data/heritage_data.gd" id="1_ge7r1"]
+
+[resource]
+script = ExtResource("1_ge7r1")
+id = "0400"
+name = "Gutsy Halfling"
+abilities = []
+variants = Array[ExtResource("1_ge7r1")]([])
+is_variant = false
+text = ""

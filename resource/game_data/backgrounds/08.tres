@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Background_Data" load_steps=2 format=3 uid="uid://cfioqve0huc0b"]
+
+[ext_resource type="Script" path="res://scripts/data/background_data.gd" id="1_1847q"]
+
+[resource]
+script = ExtResource("1_1847q")
+id = "08"
+name = "Detective"
+attribute_boost = Array[int]([3, 4])
+skill = 13
+text = "You solved crimes as a police inspector or took jobs for wealthy clients as a private investigator. You might have become an adventurer as part of your next big mystery, but likely it was due to the consequences or aftermath of a prior case."

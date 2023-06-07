@@ -1,3 +1,6 @@
+Class_Data
+Background_Data
+Heritage_Data
 Character_Data
 Save_Data
 Floor_Data

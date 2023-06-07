@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="Class_Data" load_steps=2 format=3 uid="uid://dcr8hdbjubrmm"]
+
+[ext_resource type="Script" path="res://scripts/data/class_data.gd" id="1_wej1s"]
+
+[resource]
+script = ExtResource("1_wej1s")
+name = "Cleric"
+key_attribute = Array[int]([4])
+class_hp = 8
+perception = 2
+fortitude = 2
+reflex = 2
+will = 4
+unarmed = 2
+simple = 2
+martial = 0
+advanced = 0
+unarmored = 2
+light = 0
+medium = 0
+heavy = 0
+class_dc = 2
+text = "Deities work their will upon the world in infinite ways, and you serve as one of their most stalwart mortal servants. Blessed with divine magic, you live the ideals of your faith, adorn yourself with the symbols of your church, and train diligently to wield your deity’s favored weapon. Your spells might protect and heal your allies, or they might punish foes and enemies of your faith, as your deity wills. Yours is a life of devotion, spreading the teachings of your faith through both word and deed."

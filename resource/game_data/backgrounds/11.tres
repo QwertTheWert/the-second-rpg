@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Background_Data" load_steps=2 format=3 uid="uid://cx54qy2b4bugh"]
+
+[ext_resource type="Script" path="res://scripts/data/background_data.gd" id="1_f8qnh"]
+
+[resource]
+script = ExtResource("1_f8qnh")
+id = "11"
+name = "Farmhand"
+attribute_boost = Array[int]([0, 4])
+skill = 2
+text = "With a strong back and an understanding of seasonal cycles, you tilled the land and tended crops. Your farm could have been razed by invaders, you could have lost the family tying you to the land, or you might have simply tired of the drudgery, but at some point you became an adventurer."

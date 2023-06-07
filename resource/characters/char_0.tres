@@ -1,0 +1,82 @@
+[gd_resource type="Resource" script_class="Character_Data" load_steps=8 format=3 uid="uid://cpe7hiwrik8dy"]
+
+[ext_resource type="Script" path="res://scripts/data/character_data.gd" id="1_6rdxg"]
+[ext_resource type="Script" path="res://scripts/data/character_element/stat_modifiers.gd" id="1_o1hlk"]
+[ext_resource type="Script" path="res://scripts/data/character_element/hit_points.gd" id="2_k4haw"]
+[ext_resource type="Script" path="res://scripts/data/character_element/proficiencies.gd" id="3_ltio8"]
+
+[sub_resource type="Resource" id="Resource_g5i2o"]
+script = ExtResource("1_o1hlk")
+strength = 0.0
+dexterity = 0.0
+constitution = 1.0
+intelligence = 0.0
+wisdom = 0.0
+charisma = 0.0
+
+[sub_resource type="Resource" id="Resource_nac38"]
+script = ExtResource("2_k4haw")
+ancestry_hp = 8
+class_hp = 8
+bonus_hp = 0
+bonus_hp_per_level = 0
+max_hp = 0
+current_hp = 17
+temp_hp = 0
+
+[sub_resource type="Resource" id="Resource_o1fuq"]
+script = ExtResource("3_ltio8")
+classDC = 0
+perception = 0
+fortitude = 0
+reflex = 0
+will = 0
+heavy = 0
+medium = 0
+light = 0
+unarmored = 0
+advanced = 0
+martial = 0
+simple = 0
+unarmed = 0
+spell_arcane = 0
+spell_divine = 0
+spell_occult = 0
+spell_primal = 0
+acrobatics = 0
+arcana = 0
+athletics = 0
+crafting = 0
+deception = 0
+diplomacy = 0
+intimidation = 0
+medicine = 0
+nature = 0
+occultism = 0
+performance = 0
+religion = 0
+society = 0
+stealth = 0
+survival = 0
+thievery = 0
+custom = null
+
+[resource]
+script = ExtResource("1_6rdxg")
+id = 0
+name = "Barlo"
+image_path = "res://assets/character/barlo"
+level = 1
+experience = 0
+ancestry = 4
+heritage = 0
+background = 0
+character_class = 0
+size = 2
+ability_modifier = SubResource("Resource_g5i2o")
+key_ability = 5
+languages = Array[String](["Common"])
+speed = 4
+hit_points = SubResource("Resource_nac38")
+proficiencies = SubResource("Resource_o1fuq")
+map_position = Vector2i(2, 2)

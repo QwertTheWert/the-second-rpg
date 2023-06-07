@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Background_Data" load_steps=2 format=3 uid="uid://ckip02dtp73u7"]
+
+[ext_resource type="Script" path="res://scripts/data/background_data.gd" id="1_7prw3"]
+
+[resource]
+script = ExtResource("1_7prw3")
+id = "09"
+name = "Emissary"
+attribute_boost = Array[int]([3, 5])
+skill = 13
+text = "As a diplomat or messenger, you traveled to lands far and wide. Communicating with new people and forming alliances were your stock and trade."

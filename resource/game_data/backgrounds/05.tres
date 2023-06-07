@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Background_Data" load_steps=2 format=3 uid="uid://dn1cwr7uth5kq"]
+
+[ext_resource type="Script" path="res://scripts/data/background_data.gd" id="1_t1oln"]
+
+[resource]
+script = ExtResource("1_t1oln")
+id = "05"
+name = "Bounty Hunter"
+attribute_boost = Array[int]([0, 4])
+skill = 15
+text = "Bringing in lawbreakers lined your pockets. Maybe you had an altruistic motive and sought to bring in criminals to make the streets safer, or maybe the coin was motivation enough. Your techniques for hunting down criminals transfer easily to the life of an adventurer."

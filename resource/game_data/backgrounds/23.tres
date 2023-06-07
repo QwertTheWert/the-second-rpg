@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Background_Data" load_steps=6 format=3 uid="uid://cwlkfkbio1aax"]
+
+[ext_resource type="Script" path="res://scripts/data/background_data.gd" id="1_bh7rb"]
+[ext_resource type="Resource" uid="uid://b61aqjyo8oiyn" path="res://resource/game_data/backgrounds/24.tres" id="2_l6hwr"]
+[ext_resource type="Resource" uid="uid://dhp0ceyhumubb" path="res://resource/game_data/backgrounds/25.tres" id="3_kgdqk"]
+[ext_resource type="Resource" uid="uid://m86acbkeot6e" path="res://resource/game_data/backgrounds/26.tres" id="4_d165n"]
+[ext_resource type="Resource" uid="uid://4whi5e1u5v25" path="res://resource/game_data/backgrounds/27.tres" id="5_ev8js"]
+
+[resource]
+script = ExtResource("1_bh7rb")
+id = "23"
+name = "Scholar"
+attribute_boost = Array[int]([3, 4])
+skill = 0
+variants = Array[ExtResource("1_bh7rb")]([ExtResource("2_l6hwr"), ExtResource("3_kgdqk"), ExtResource("4_d165n"), ExtResource("5_ev8js")])
+is_variant = false
+text = "You have a knack for learning, and sequestered yourself from the outside world to learn all you could. You read about so many wondrous places and things in your books, and always dreamed about one day seeing the real things. Eventually, that curiosity led you to leave your studies and become an adventurer."

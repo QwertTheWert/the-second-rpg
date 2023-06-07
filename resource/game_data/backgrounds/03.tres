@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Background_Data" load_steps=2 format=3 uid="uid://j0aanh55m353"]
+
+[ext_resource type="Script" path="res://scripts/data/background_data.gd" id="1_s6bm0"]
+
+[resource]
+script = ExtResource("1_s6bm0")
+id = "03"
+name = "Artist"
+attribute_boost = Array[int]([1, 5])
+skill = 3
+text = "Your art is your greatest passion, whatever form it takes. Adventuring might help you find inspiration, or simply be a way to survive until you become a world-famous artist."

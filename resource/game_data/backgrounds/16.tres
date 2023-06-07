@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Background_Data" load_steps=2 format=3 uid="uid://cxwsuncm43i6e"]
+
+[ext_resource type="Script" path="res://scripts/data/background_data.gd" id="1_4vgm5"]
+
+[resource]
+script = ExtResource("1_4vgm5")
+id = "16"
+name = "Guard"
+attribute_boost = Array[int]([0, 5])
+skill = 6
+text = "You served in the guard, out of either patriotism or the need for coin. Either way, you know how to get a difficult suspect to talk. However you left the guard, you might think of adventuring as a way to use your skills on a wider stage."

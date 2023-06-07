@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Background_Data" load_steps=2 format=3 uid="uid://jgjw7w8a3j7r"]
+
+[ext_resource type="Script" path="res://scripts/data/background_data.gd" id="1_jfcn2"]
+
+[resource]
+script = ExtResource("1_jfcn2")
+id = "00"
+name = "Acolyte"
+attribute_boost = Array[int]([3, 4])
+skill = 12
+variants = Array[ExtResource("1_jfcn2")]([])
+is_variant = false
+text = "You spent your early days in a religious monastery or cloister. You may have traveled out into the world to spread the message of your religion or because you cast away the teachings of your faith, but deep down you’ll always carry within you the lessons you learned."

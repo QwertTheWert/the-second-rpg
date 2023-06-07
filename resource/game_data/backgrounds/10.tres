@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Background_Data" load_steps=2 format=3 uid="uid://qhfsrhvbn5xf"]
+
+[ext_resource type="Script" path="res://scripts/data/background_data.gd" id="1_bm6nx"]
+
+[resource]
+script = ExtResource("1_bm6nx")
+id = "10"
+name = "Entertainer"
+attribute_boost = Array[int]([1, 5])
+skill = 11
+text = "Through an education in the arts or sheer dogged practice, you learned to entertain crowds. You might have been an actor, a dancer, a musician, a street magician, or any other sort of performer."

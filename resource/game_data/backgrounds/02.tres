@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Background_Data" load_steps=2 format=3 uid="uid://l8sxcbv5svlw"]
+
+[ext_resource type="Script" path="res://scripts/data/background_data.gd" id="1_vh3ya"]
+
+[resource]
+script = ExtResource("1_vh3ya")
+id = "02"
+name = "Artisan"
+attribute_boost = Array[int]([0, 3])
+skill = 3
+text = "As an apprentice, you practiced a particular form of building or crafting, developing specialized skill. You might have been a blacksmith’s apprentice toiling over the forge for countless hours, a young tailor sewing garments of all kinds, or a shipwright shaping the hulls of ships."

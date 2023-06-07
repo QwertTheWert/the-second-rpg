@@ -7,4 +7,6 @@ default_font = ExtResource("2_7qc07")
 default_font_size = 16
 Button/styles/focus = null
 Label/colors/font_outline_color = Color(0, 0, 0, 1)
-Label/constants/outline_size = 8
+Label/constants/outline_size = 16
+Label/font_sizes/font_size = 32
+Label/fonts/font = ExtResource("2_7qc07")

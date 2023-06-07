@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="Character_Data" load_steps=6 format=3 uid="uid://cr5r2xr1hek6x"]
+
+[ext_resource type="Script" path="res://scripts/data/character_data.gd" id="1_6rdxg"]
+[ext_resource type="Script" path="res://scripts/data/character_element/stat_modifiers.gd" id="1_vle3k"]
+[ext_resource type="Script" path="res://scripts/data/character_element/hit_points.gd" id="2_6xdvc"]
+
+[sub_resource type="Resource" id="Resource_goqxo"]
+script = ExtResource("1_vle3k")
+strength = 0.0
+dexterity = 0.0
+constitution = 2.0
+intelligence = 0.0
+wisdom = 0.0
+charisma = 0.0
+
+[sub_resource type="Resource" id="Resource_nqyey"]
+script = ExtResource("2_6xdvc")
+ancestry_hp = 8
+class_hp = 10
+bonus_hp = 0
+bonus_hp_per_level = 0
+max_hp = 0
+current_hp = 20
+temp_hp = 0
+
+[resource]
+script = ExtResource("1_6rdxg")
+id = 1
+name = "Vasha"
+image_path = "res://assets/character/vasha"
+level = 1
+experience = 0
+ancestry = 4
+heritage = 0
+background = 0
+character_class = 0
+size = 2
+ability_modifier = SubResource("Resource_goqxo")
+key_ability = 0
+languages = Array[String](["Common"])
+speed = 5
+hit_points = SubResource("Resource_nqyey")
+map_position = Vector2i(2, 3)

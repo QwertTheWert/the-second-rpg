@@ -15,13 +15,13 @@ func _on_gui_input(event):
 
 
 func _on_pressed():
-	if  _main.gamemode == Global.Gamemode.EXPLORATION:
-		if (not _main.is_shifted):
+	if  Global.gamemode == Global.Gamemode.EXPLORATION:
+		if (not Global.is_shifted):
 			var reselect = _token.tokens.more_than_one_character_selected()
 			get_tree().call_group("Character", "unselect", _token.name)
 			if reselect:
 				button_pressed = true
-			_main.selected_character.erase(_token.name)
+			Global.selected_character.erase(_token.name)
 	else:
 		get_tree().call_group("Character", "unselect", _token.name)
 	
@@ -47,15 +47,15 @@ func _on_toggled(_button_pressed):
 		$"../Control/NamePlate".show()
 		_token.marker.get_node("SelectedSprite").show()
 		_token.marker.get_node("UnselectedSprite").hide()
-		if not _main.selected_character.has(_token.name):
-			_main.selected_character.append(_token.name)
-		if _main.selected_character.size() == 1 or _main.selected_character.size() > 1 and _main.is_shifted:
+		if not Global.selected_character.has(_token.name):
+			Global.selected_character.append(_token.name)
+		if Global.selected_character.size() == 1 or Global.selected_character.size() > 1 and Global.is_shifted:
 			_token.selection_status_changed.emit()
 	else:
 		$"../Control/SelectOutline".hide()
 		$"../Control/NamePlate".hide()
 		_token.marker.get_node("SelectedSprite").hide()
 		_token.marker.get_node("UnselectedSprite").show()
-		_main.selected_character.erase(_token.name)
+		Global.selected_character.erase(_token.name)
 		_token.selection_status_changed.emit()
 		

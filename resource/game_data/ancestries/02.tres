@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Ancestry_Data" load_steps=6 format=3 uid="uid://b8ibhgwuj3tmy"]
+
+[ext_resource type="Resource" uid="uid://btn1sl81oc03l" path="res://resource/game_data/heritages/0200.tres" id="1_6cnfu"]
+[ext_resource type="Script" path="res://scripts/data/ancestry_data.gd" id="1_lqoj8"]
+[ext_resource type="Resource" uid="uid://d18yl8pag6y7t" path="res://resource/game_data/heritages/0201.tres" id="2_7bawv"]
+[ext_resource type="Resource" uid="uid://yot0sohbd8tc" path="res://resource/game_data/heritages/0202.tres" id="3_3ms7f"]
+[ext_resource type="Resource" uid="uid://by6imap55tlwh" path="res://resource/game_data/heritages/0203.tres" id="4_ht87n"]
+
+[resource]
+script = ExtResource("1_lqoj8")
+name = "Gnome"
+traits = Array[String](["Gnome", "Humanoid"])
+heritages = Array[Resource("res://scripts/data/heritage_data.gd")]([ExtResource("1_6cnfu"), ExtResource("2_7bawv"), ExtResource("3_3ms7f"), ExtResource("4_ht87n")])
+attribute_boost = Array[int]([1, 3])
+attribute_flaw = Array[int]([0])
+size = 1
+ancestry_hp = 8
+speed = 5
+abilities = []
+text = "Long ago, early gnome ancestors emigrated from the realm of the fey. While it’s unclear why the first gnomes wandered to the Material Plane, this lineage manifests in modern gnomes as bizarre reasoning, eccentricity, obsessive tendencies, and what some see as naivete. These qualities are further reflected in their physical characteristics, such as spindly limbs, brightly colored hair, and childlike and extremely expressive facial features that further reflect their otherworldly origins."

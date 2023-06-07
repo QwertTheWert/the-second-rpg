@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Heritage_Data" load_steps=2 format=3 uid="uid://dshq4xy00bpv3"]
+
+[ext_resource type="Script" path="res://scripts/data/heritage_data.gd" id="1_qmln8"]
+
+[resource]
+script = ExtResource("1_qmln8")
+id = "0100"
+name = "Cavern Elf"
+abilities = []
+text = ""
