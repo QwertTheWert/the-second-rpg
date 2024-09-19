@@ -1,12 +1,16 @@
-[gd_resource type="Resource" script_class="Heritage_Data" load_steps=2 format=3 uid="uid://ccl5cx6us6eny"]
+[gd_resource type="Resource" script_class="Heritage_Data" load_steps=3 format=3 uid="uid://ccl5cx6us6eny"]
 
+[ext_resource type="Texture2D" uid="uid://bdrdbq875h7w0" path="res://assets/data/heritage/grave-orc.webp" id="1_f3uwq"]
 [ext_resource type="Script" path="res://scripts/data/heritage_data.gd" id="1_whm1w"]
 
 [resource]
 script = ExtResource("1_whm1w")
-id = "0602"
 name = "Grave Orc"
+image = ExtResource("1_f3uwq")
+traits = Array[String]([])
 abilities = []
 variants = Array[ExtResource("1_whm1w")]([])
+is_prerequisite_for = Array[Resource("res://scripts/data/feature_data.gd")]([])
 is_variant = false
-text = "You were exposed to powerful necromantic energies that should have killed you—but you survived. Your skin is cold, clammy, and gray. You gain resistance to negative damage equal to half your level (minimum 1). You also gain a +1 circumstance bonus to saving throws against necromancy effects."
+text = "You were exposed to powerful necromantic energies that should have killed you—but you survived. Your skin is cold, clammy, and gray. You gain resistance to negative damage equal to half your level (minimum 1). You also gain a +1 circumstance bonus to saving throws against necromancy effects.
+"

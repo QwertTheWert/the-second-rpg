@@ -1,12 +1,16 @@
-[gd_resource type="Resource" script_class="Heritage_Data" load_steps=2 format=3 uid="uid://pcq8ls771h7r"]
+[gd_resource type="Resource" script_class="Heritage_Data" load_steps=3 format=3 uid="uid://pcq8ls771h7r"]
 
+[ext_resource type="Texture2D" uid="uid://cio7v2cn0pi7t" path="res://assets/data/heritage/hold-scarred-orc.webp" id="1_rcsai"]
 [ext_resource type="Script" path="res://scripts/data/heritage_data.gd" id="1_tjqim"]
 
 [resource]
 script = ExtResource("1_tjqim")
-id = "0603"
 name = "Hold-Scarred Orc"
+image = ExtResource("1_rcsai")
+traits = Array[String]([])
 abilities = []
 variants = Array[ExtResource("1_tjqim")]([])
+is_prerequisite_for = Array[Resource("res://scripts/data/feature_data.gd")]([])
 is_variant = false
-text = "You are part of an orc community that participates in ritual scarification or tattooing. The marks on your skin show your exceptional hardiness and vitality. You gain 12 Hit Points from your ancestry instead of 10. You also gain the Diehard feat"
+text = "You are part of an orc community that participates in ritual scarification or tattooing. The marks on your skin show your exceptional hardiness and vitality. You gain 12 Hit Points from your ancestry instead of 10. You also gain the Diehard feat.
+"

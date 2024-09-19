@@ -4,8 +4,9 @@
 
 [resource]
 script = ExtResource("1_r3nbg")
-id = "01"
 name = "Acrobat"
 attribute_boost = Array[int]([0, 1])
 skill = 0
+variants = Array[ExtResource("1_r3nbg")]([])
+is_variant = false
 text = "In a circus or on the streets, you earned your pay by performing as an acrobat. You might have turned to adventuring when the money dried up, or simply decided to put your skills to better use."

@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Feature_Data" load_steps=2 format=3 uid="uid://ciakhhslw5j6p"]
+
+[ext_resource type="Script" path="res://scripts/data/feature_data.gd" id="1_hbu2l"]
+
+[resource]
+script = ExtResource("1_hbu2l")
+name = "Clan's Edge"
+variant_name = ""
+type = 0
+level = 1
+traits = Array[String](["Dwarf"])
+prerequisites = Array[ExtResource("1_hbu2l")]([])
+is_prerequisite_for = Array[ExtResource("1_hbu2l")]([])
+variants = Array[ExtResource("1_hbu2l")]([])
+is_variant = false
+upper_text = ""
+text = "By moving your clan dagger with rapid precision, you can protect yourself more effectively. Make two clan dagger Strikes against different targets. Your multiple attack penalty applies normally to these Strikes. You then use an Interact action to gain the +1 circumstance bonus to your AC from your clan dagger’s parrying trait.
+"
+ability = ""

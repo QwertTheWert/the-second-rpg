@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="Class_Data" load_steps=11 format=3 uid="uid://blpedabw0sx53"]
+
+[ext_resource type="Resource" uid="uid://crntth300ds7o" path="res://resource/game_data/features/class_features/bard/01-bard-occult-spellcasting.tres" id="1_3jd7o"]
+[ext_resource type="Resource" uid="uid://bwo480636axh4" path="res://resource/game_data/features/class_features/general/skill-feat-02.tres" id="1_pn1rj"]
+[ext_resource type="Script" path="res://scripts/data/class_data.gd" id="1_v8m37"]
+[ext_resource type="Resource" uid="uid://b8cv6ghw0af87" path="res://resource/game_data/features/class_features/bard/01-bard-spell-repertoire.tres" id="2_cf3lb"]
+[ext_resource type="Resource" uid="uid://cp45y35b10y6c" path="res://resource/game_data/features/class_features/general/skill-feat-04.tres" id="2_dgayc"]
+[ext_resource type="Texture2D" uid="uid://bj11kdifsda5f" path="res://assets/data/class/bard.webp" id="3_6pfar"]
+[ext_resource type="Resource" uid="uid://cykbfwbgaesrd" path="res://resource/game_data/features/class_features/bard/01-composition-spells.tres" id="3_cbbu6"]
+[ext_resource type="Resource" uid="uid://rbm4rbt4f8kk" path="res://resource/game_data/features/class_features/bard/01-muse.tres" id="4_j8skd"]
+[ext_resource type="Resource" uid="uid://bkclm3g310rlb" path="res://resource/game_data/features/subclass/muse/maestro-muse.tres" id="9_7krih"]
+[ext_resource type="Resource" uid="uid://5vo2c1ooctfa" path="res://resource/game_data/features/subclass/muse/polymath-muse.tres" id="10_d4c6e"]
+
+[resource]
+script = ExtResource("1_v8m37")
+name = "Bard"
+image = ExtResource("3_6pfar")
+key_attribute = Array[int]([5])
+class_hp = 8
+perception = 4
+fortitude = 2
+reflex = 2
+will = 4
+unarmed = 2
+simple = 2
+martial = 2
+advanced = 0
+unarmored = 2
+light = 2
+medium = 0
+heavy = 0
+class_dc = 0
+arcane = 0
+divine = 0
+occult = 2
+primal = 0
+features = Array[Resource("res://scripts/data/feature_data.gd")]([ExtResource("1_3jd7o"), ExtResource("2_cf3lb"), ExtResource("3_cbbu6"), ExtResource("4_j8skd"), ExtResource("1_pn1rj"), ExtResource("2_dgayc")])
+feats = Array[Resource("res://scripts/data/feature_data.gd")]([])
+subclasses1 = Array[Resource("res://scripts/data/feature_data.gd")]([ExtResource("9_7krih"), ExtResource("10_d4c6e")])
+subclasses2 = Array[Resource("res://scripts/data/feature_data.gd")]([])
+text = "You are a master of artistry, a scholar of hidden secrets, and a captivating persuader. Using powerful performances, you influence minds and elevate souls to new levels of heroics. You might use your powers to become a charismatic leader, or perhaps you might instead be a counselor, manipulator, scholar, scoundrel, or virtuoso. While your versatility leads some to consider you a beguiling ne’erdo- well and a jack-of-all-trades, it’s dangerous to dismiss you as a master of none.
+"

@@ -1,0 +1,40 @@
+[gd_resource type="Resource" script_class="Class_Data" load_steps=9 format=3 uid="uid://cs3yvyi4y7d56"]
+
+[ext_resource type="Resource" uid="uid://dfivaqrhgt4c" path="res://resource/game_data/features/class_features/rogue/01-rogues-racket.tres" id="1_huf35"]
+[ext_resource type="Texture2D" uid="uid://b06kurhqnr448" path="res://assets/data/class/rogue.webp" id="1_nwb5d"]
+[ext_resource type="Script" path="res://scripts/data/class_data.gd" id="1_wej1s"]
+[ext_resource type="Resource" uid="uid://blq3e6bypmmh2" path="res://resource/game_data/features/class_features/rogue/01-sneak-attack.tres" id="2_3e05j"]
+[ext_resource type="Resource" uid="uid://vrplhbuk3c8v" path="res://resource/game_data/features/subclass/racket/rufifan-racket.tres" id="3_866kv"]
+[ext_resource type="Resource" uid="uid://c682o47tpd33t" path="res://resource/game_data/features/class_features/rogue/01-surprise-attack.tres" id="3_ldb64"]
+[ext_resource type="Resource" uid="uid://utqmhudebf21" path="res://resource/game_data/features/subclass/racket/thief-racket.tres" id="4_1assp"]
+[ext_resource type="Resource" uid="uid://wwhv0i3wbg5n" path="res://resource/game_data/features/class_features/general/martial-class-feat-01.tres" id="4_y5i02"]
+
+[resource]
+script = ExtResource("1_wej1s")
+name = "Rogue"
+image = ExtResource("1_nwb5d")
+key_attribute = Array[int]([1, 0, 2, 3, 4, 5])
+class_hp = 8
+perception = 4
+fortitude = 2
+reflex = 4
+will = 4
+unarmed = 2
+simple = 2
+martial = 2
+advanced = 0
+unarmored = 2
+light = 2
+medium = 0
+heavy = 0
+class_dc = 2
+arcane = 0
+divine = 0
+occult = 0
+primal = 0
+features = Array[Resource("res://scripts/data/feature_data.gd")]([ExtResource("1_huf35"), ExtResource("2_3e05j"), ExtResource("3_ldb64"), ExtResource("4_y5i02")])
+feats = Array[Resource("res://scripts/data/feature_data.gd")]([])
+subclasses1 = Array[Resource("res://scripts/data/feature_data.gd")]([ExtResource("3_866kv"), ExtResource("4_1assp")])
+subclasses2 = Array[Resource("res://scripts/data/feature_data.gd")]([])
+text = "You are skilled and opportunistic. Using your sharp wits and quick reactions, you take advantage of your opponents’ missteps and strike where it hurts most. You play a dangerous game, seeking thrills and testing your skills, and likely don’t care much for any laws that happen to get in your way. While the path of every rogue is unique and riddled with danger, the one thing you all share in common is the breadth and depth of your skills.
+"

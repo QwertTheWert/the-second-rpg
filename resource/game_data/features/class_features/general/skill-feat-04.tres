@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Feature_Data" load_steps=2 format=3 uid="uid://cp45y35b10y6c"]
+
+[ext_resource type="Script" path="res://scripts/data/feature_data.gd" id="1_hcibb"]
+
+[resource]
+script = ExtResource("1_hcibb")
+name = "Skill Feat"
+variant_name = ""
+type = 1
+level = 4
+traits = Array[String]([])
+prerequisites = Array[ExtResource("1_hcibb")]([])
+is_prerequisite_for = Array[ExtResource("1_hcibb")]([])
+variants = Array[ExtResource("1_hcibb")]([])
+is_variant = false
+upper_text = ""
+text = "At 2nd level and every 2 levels thereafter, you gain a skill feat. You must be trained or better in the corresponding skill to select a skill feat.
+"
+ability = ""

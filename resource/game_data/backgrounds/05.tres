@@ -4,8 +4,11 @@
 
 [resource]
 script = ExtResource("1_t1oln")
-id = "05"
 name = "Bounty Hunter"
+variant_name = ""
 attribute_boost = Array[int]([0, 4])
 skill = 15
-text = "Bringing in lawbreakers lined your pockets. Maybe you had an altruistic motive and sought to bring in criminals to make the streets safer, or maybe the coin was motivation enough. Your techniques for hunting down criminals transfer easily to the life of an adventurer."
+variants = Array[ExtResource("1_t1oln")]([])
+is_variant = false
+text = "Bringing in lawbreakers lined your pockets. Maybe you had an altruistic motive and sought to bring in criminals to make the streets safer, or maybe the coin was motivation enough. Your techniques for hunting down criminals transfer easily to the life of an adventurer.
+"

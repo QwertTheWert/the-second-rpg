@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="Feature_Data" load_steps=3 format=3 uid="uid://cykbfwbgaesrd"]
+
+[ext_resource type="Texture2D" uid="uid://dursmo80c0f7h" path="res://assets/data/features/composition-spell.webp" id="1_l5oxf"]
+[ext_resource type="Script" path="res://scripts/data/feature_data.gd" id="2_2vxow"]
+
+[resource]
+script = ExtResource("2_2vxow")
+name = "Composition Spell"
+variant_name = ""
+type = 1
+image = ExtResource("1_l5oxf")
+level = 1
+traits = Array[String]([])
+prerequisites = Array[ExtResource("2_2vxow")]([])
+is_prerequisite_for = Array[ExtResource("2_2vxow")]([])
+variants = Array[ExtResource("2_2vxow")]([])
+is_variant = false
+upper_text = ""
+text = "The collection of spells you can cast is called your spell repertoire. At 1st level, you learn two 1st-level occult spells of your choice and five occult cantrips of your choice. You choose these from the common spells from the occult list or from other occult spells to which you have access. You can cast any spell in your spell repertoire by using a spell slot of an appropriate spell level.
+
+You add to this spell repertoire as you increase in level. Each time you get a spell slot (see Table 3–6), you add a spell to your spell repertoire of the same level. At 2nd level, you select another 1st-level spell; at 3rd level, you select two 2nd-level spells, and so on. When you add spells, you might add a higher-level version of a spell you already have, so you can cast a heightened version of that spell.
+
+Though you gain them at the same rate, your spell slots and the spells in your spell repertoire are separate. If a feat or other ability adds a spell to your spell repertoire, it wouldn't give you another spell slot, and vice versa.
+
+[p align=left][font_size=24][b]Swapping Spells in Your Repertoire[/b][/font_size][/p]
+As you gain new spells in your repertoire, you might want to replace some of the spells you previously learned. Each time you gain a level and learn new spells, you can swap out one of your old spells for a different spell of the same level. This spell can be a cantrip. You can also swap out spells by retraining during downtime.
+"
+ability = ""

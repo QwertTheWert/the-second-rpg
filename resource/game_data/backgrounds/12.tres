@@ -4,8 +4,11 @@
 
 [resource]
 script = ExtResource("1_dhs6u")
-id = "12"
 name = "Field Medic"
+variant_name = ""
 attribute_boost = Array[int]([2, 4])
 skill = 8
-text = "In the chaotic rush of battle, you learned to adapt to rapidly changing conditions as you administered to battle casualties. You patched up soldiers, guards, or other combatants, and learned a fair amount about the logistics of war."
+variants = Array[ExtResource("1_dhs6u")]([])
+is_variant = false
+text = "In the chaotic rush of battle, you learned to adapt to rapidly changing conditions as you administered to battle casualties. You patched up soldiers, guards, or other combatants, and learned a fair amount about the logistics of war.
+"

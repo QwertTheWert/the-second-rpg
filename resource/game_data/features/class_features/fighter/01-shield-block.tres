@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Feature_Data" load_steps=3 format=3 uid="uid://gnmtsry0ph4q"]
+
+[ext_resource type="Script" path="res://scripts/data/feature_data.gd" id="1_4vbtp"]
+[ext_resource type="Texture2D" uid="uid://bgvkxxxc3yy5t" path="res://assets/data/features/shield-block.webp" id="1_xexcj"]
+
+[resource]
+script = ExtResource("1_4vbtp")
+name = "Shield Block"
+variant_name = ""
+type = 1
+image = ExtResource("1_xexcj")
+level = 1
+traits = Array[String]([])
+prerequisites = Array[ExtResource("1_4vbtp")]([])
+is_prerequisite_for = Array[ExtResource("1_4vbtp")]([])
+variants = Array[ExtResource("1_4vbtp")]([])
+is_variant = false
+upper_text = ""
+text = "You gain the Shield Block general feat, a reaction that lets you reduce damage with your shield.
+"
+ability = ""

@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Feature_Data" load_steps=2 format=3 uid="uid://5vo2c1ooctfa"]
+
+[ext_resource type="Script" path="res://scripts/data/feature_data.gd" id="1_2r2iv"]
+
+[resource]
+script = ExtResource("1_2r2iv")
+name = "Polymath"
+variant_name = ""
+type = 2
+level = 1
+traits = Array[String]([])
+prerequisites = Array[ExtResource("1_2r2iv")]([])
+is_prerequisite_for = Array[ExtResource("1_2r2iv")]([])
+variants = Array[ExtResource("1_2r2iv")]([])
+is_variant = false
+upper_text = ""
+text = "Your muse is a jack of all trades, flitting between skills and pursuits. If it's is a creature, it might be an eclectic creature like a fey; if a deity, it might be Desna or Calistria. As a bard with a polymath muse, you are interested in a wide array of topics but rarely dedicated to any one, and you rarely make up your mind—you want to try everything. You gain the Versatile Performance feat and add unseen servant to your spell repertoire. 
+"
+ability = ""

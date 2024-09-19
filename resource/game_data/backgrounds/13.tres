@@ -4,8 +4,11 @@
 
 [resource]
 script = ExtResource("1_7ihhx")
-id = "13"
 name = "Fortune Teller"
+variant_name = ""
 attribute_boost = Array[int]([3, 5])
 skill = 10
-text = "The strands of fate are clear to you, as you have learned many traditional forms by which laypeople can divine the future. You might have used these skills to guide your community, or simply to make money. But even the slightest peek into these practices connects you to the occult mysteries of the universe."
+variants = Array[ExtResource("1_7ihhx")]([])
+is_variant = false
+text = "The strands of fate are clear to you, as you have learned many traditional forms by which laypeople can divine the future. You might have used these skills to guide your community, or simply to make money. But even the slightest peek into these practices connects you to the occult mysteries of the universe.
+"

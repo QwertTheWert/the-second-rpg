@@ -1,20 +1,25 @@
-[gd_resource type="Resource" script_class="Ancestry_Data" load_steps=6 format=3 uid="uid://dfwyb4j6vfuo5"]
+[gd_resource type="Resource" script_class="Ancestry_Data" load_steps=8 format=3 uid="uid://d1qajhf44ednh"]
 
+[ext_resource type="Resource" uid="uid://cgqtgctg88l1b" path="res://resource/game_data/features/darkvision.tres" id="1_3vivv"]
 [ext_resource type="Script" path="res://scripts/data/ancestry_data.gd" id="1_a0xob"]
 [ext_resource type="Resource" uid="uid://cpesjb3h1dulw" path="res://resource/game_data/heritages/0300.tres" id="1_d7fdy"]
 [ext_resource type="Resource" uid="uid://dwcsmmmd0yho3" path="res://resource/game_data/heritages/0301.tres" id="2_1ytw7"]
 [ext_resource type="Resource" uid="uid://b3tv34ipngck8" path="res://resource/game_data/heritages/0302.tres" id="3_3uiol"]
 [ext_resource type="Resource" uid="uid://bjmpvyuejetlm" path="res://resource/game_data/heritages/0303.tres" id="4_5hu3c"]
+[ext_resource type="Texture2D" uid="uid://c8gfxb6sp7rm0" path="res://assets/data/ancestry/goblin.svg" id="5_llwyh"]
 
 [resource]
 script = ExtResource("1_a0xob")
 name = "Goblin"
+image = ExtResource("5_llwyh")
 traits = Array[String](["Goblin", "Humanoid"])
 heritages = Array[Resource("res://scripts/data/heritage_data.gd")]([ExtResource("1_d7fdy"), ExtResource("2_1ytw7"), ExtResource("3_3uiol"), ExtResource("4_5hu3c")])
+feats = Array[Resource("res://scripts/data/feature_data.gd")]([])
 attribute_boost = Array[int]([1, 5])
 attribute_flaw = Array[int]([4])
 size = 1
 ancestry_hp = 8
 speed = 5
-abilities = []
-text = "Claiming no place as their own, halflings control few settlements larger than villages. Instead, they frequently live among humans within the walls of larger cities, carving out small communities alongside taller folk. Many halflings lead perfectly fulfilling lives in the shadows of their larger neighbors, while others prefer a nomadic existence, traveling the world and taking advantage of opportunities and adventures as they come."
+features = Array[Resource("res://scripts/data/feature_data.gd")]([ExtResource("1_3vivv")])
+text = "Claiming no place as their own, halflings control few settlements larger than villages. Instead, they frequently live among humans within the walls of larger cities, carving out small communities alongside taller folk. Many halflings lead perfectly fulfilling lives in the shadows of their larger neighbors, while others prefer a nomadic existence, traveling the world and taking advantage of opportunities and adventures as they come.
+"

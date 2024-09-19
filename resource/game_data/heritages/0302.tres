@@ -1,12 +1,15 @@
-[gd_resource type="Resource" script_class="Heritage_Data" load_steps=2 format=3 uid="uid://b3tv34ipngck8"]
+[gd_resource type="Resource" script_class="Heritage_Data" load_steps=3 format=3 uid="uid://b3tv34ipngck8"]
 
 [ext_resource type="Script" path="res://scripts/data/heritage_data.gd" id="1_57jum"]
+[ext_resource type="Texture2D" uid="uid://ctsyvgenjep8d" path="res://assets/data/heritage/razortooth-goblin.webp" id="1_ibjdt"]
 
 [resource]
 script = ExtResource("1_57jum")
-id = "0302"
 name = "Razortooth Goblin"
+image = ExtResource("1_ibjdt")
+traits = Array[String]([])
 abilities = []
 variants = Array[ExtResource("1_57jum")]([])
+is_prerequisite_for = Array[Resource("res://scripts/data/feature_data.gd")]([])
 is_variant = false
 text = ""

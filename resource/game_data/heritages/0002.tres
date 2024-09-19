@@ -1,12 +1,18 @@
-[gd_resource type="Resource" script_class="Heritage_Data" load_steps=2 format=3 uid="uid://pe5tq50wfo6o"]
+[gd_resource type="Resource" script_class="Heritage_Data" load_steps=3 format=3 uid="uid://pe5tq50wfo6o"]
 
 [ext_resource type="Script" path="res://scripts/data/heritage_data.gd" id="1_fqwm1"]
+[ext_resource type="Texture2D" uid="uid://bij7a4vqy0bpi" path="res://assets/data/heritage/rock-dwarf.webp" id="1_uqncc"]
 
 [resource]
 script = ExtResource("1_fqwm1")
-id = "0002"
 name = "Rock Dwarf"
+image = ExtResource("1_uqncc")
+traits = Array[String]([])
 abilities = []
 variants = Array[ExtResource("1_fqwm1")]([])
+is_prerequisite_for = Array[Resource("res://scripts/data/feature_data.gd")]([])
 is_variant = false
-text = ""
+text = "Your ancestors lived and worked among the great ancient stones of the mountains or the depths of the earth. This makes you solid as a rock when you plant your feet. You gain a +2 circumstance bonus to your Fortitude or Reflex DC against attempts to Shove or Trip you. This bonus also applies to saving throws against spells or effects that attempt to knock you prone.
+
+In addition, if any effect would force you to move 10 feet or more, you are moved only half the distance.
+"

@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Feature_Data" load_steps=3 format=3 uid="uid://rbm4rbt4f8kk"]
+
+[ext_resource type="Texture2D" uid="uid://lqabuicrgodr" path="res://assets/data/features/choice-feature.webp" id="1_so5lh"]
+[ext_resource type="Script" path="res://scripts/data/feature_data.gd" id="1_swuu0"]
+
+[resource]
+script = ExtResource("1_swuu0")
+name = "Muse"
+variant_name = ""
+type = 1
+image = ExtResource("1_so5lh")
+level = 1
+traits = Array[String]([])
+prerequisites = Array[ExtResource("1_swuu0")]([])
+is_prerequisite_for = Array[ExtResource("1_swuu0")]([])
+variants = Array[ExtResource("1_swuu0")]([])
+is_variant = false
+upper_text = ""
+text = "As a bard, you select one muse at 1st level. This muse leads you to great things, and might be a physical creature, a deity, a philosophy, or a captivating mystery.
+"
+ability = ""

@@ -4,8 +4,11 @@
 
 [resource]
 script = ExtResource("1_4vgm5")
-id = "16"
 name = "Guard"
+variant_name = ""
 attribute_boost = Array[int]([0, 5])
 skill = 6
-text = "You served in the guard, out of either patriotism or the need for coin. Either way, you know how to get a difficult suspect to talk. However you left the guard, you might think of adventuring as a way to use your skills on a wider stage."
+variants = Array[ExtResource("1_4vgm5")]([])
+is_variant = false
+text = "You served in the guard, out of either patriotism or the need for coin. Either way, you know how to get a difficult suspect to talk. However you left the guard, you might think of adventuring as a way to use your skills on a wider stage.
+"

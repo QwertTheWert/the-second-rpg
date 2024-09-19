@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Feature_Data" load_steps=2 format=3 uid="uid://bkclm3g310rlb"]
+
+[ext_resource type="Script" path="res://scripts/data/feature_data.gd" id="1_dhdu3"]
+
+[resource]
+script = ExtResource("1_dhdu3")
+name = "Maestro"
+variant_name = ""
+type = 2
+level = 1
+traits = Array[String]([])
+prerequisites = Array[ExtResource("1_dhdu3")]([])
+is_prerequisite_for = Array[ExtResource("1_dhdu3")]([])
+variants = Array[ExtResource("1_dhdu3")]([])
+is_variant = false
+upper_text = ""
+text = "Your muse is a virtuoso, inspiring you to greater heights. If it's a creature, it might be a performance-loving creature such as a choral angel or lillend azata; if a deity, it might be Shelyn. As a bard with a maestro muse, you are an inspiration to your allies and confident of your musical and oratorical abilities. You gain the Lingering Composition feat and add soothe to your spell repertoire. 
+"
+ability = ""

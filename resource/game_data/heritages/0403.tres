@@ -1,12 +1,15 @@
-[gd_resource type="Resource" script_class="Heritage_Data" load_steps=2 format=3 uid="uid://b11wbahhtl0wg"]
+[gd_resource type="Resource" script_class="Heritage_Data" load_steps=3 format=3 uid="uid://b11wbahhtl0wg"]
 
+[ext_resource type="Texture2D" uid="uid://bgtgb2ryhd2i6" path="res://assets/data/heritage/twilight-halfling.webp" id="1_6h2eo"]
 [ext_resource type="Script" path="res://scripts/data/heritage_data.gd" id="1_uiawk"]
 
 [resource]
 script = ExtResource("1_uiawk")
-id = "0403"
 name = "Twilight Halfling"
+image = ExtResource("1_6h2eo")
+traits = Array[String]([])
 abilities = []
 variants = Array[ExtResource("1_uiawk")]([])
+is_prerequisite_for = Array[Resource("res://scripts/data/feature_data.gd")]([])
 is_variant = false
 text = ""

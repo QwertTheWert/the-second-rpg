@@ -1,12 +1,15 @@
-[gd_resource type="Resource" script_class="Heritage_Data" load_steps=2 format=3 uid="uid://d27hc3tew3hgm"]
+[gd_resource type="Resource" script_class="Heritage_Data" load_steps=3 format=3 uid="uid://d27hc3tew3hgm"]
 
+[ext_resource type="Texture2D" uid="uid://bgx4wtiuintht" path="res://assets/data/heritage/gutsy-halfling.webp" id="1_ge1hx"]
 [ext_resource type="Script" path="res://scripts/data/heritage_data.gd" id="1_ge7r1"]
 
 [resource]
 script = ExtResource("1_ge7r1")
-id = "0400"
 name = "Gutsy Halfling"
+image = ExtResource("1_ge1hx")
+traits = Array[String]([])
 abilities = []
 variants = Array[ExtResource("1_ge7r1")]([])
+is_prerequisite_for = Array[Resource("res://scripts/data/feature_data.gd")]([])
 is_variant = false
 text = ""

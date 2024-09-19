@@ -4,16 +4,31 @@ extends Resource
 @export var id : int
 @export var name := "Default"
 @export_dir var image_path: String
+
 @export var level := 1
 @export var experience := 0
-@export var ancestry : Ancestry_Data = load("res://resource/game_data/ancestries/06.tres")
-@export var heritage := load("res://resource/game_data/heritages/0600.tres")
-@export var background := load("res://resource/game_data/backgrounds/00.tres")
-@export var character_class:= load("res://resource/game_data/classes/00.tres")
+
+@export var ancestry : Ancestry_Data
+@export var heritage : Heritage_Data
+@export var background : Background_Data
+@export var character_class: Class_Data
+@export var subclass1: Feature_Data
+@export var subclass2: Feature_Data
 
 @export var size:= Global.Size.MEDIUM
 
-@export var ability_modifier:= Stat_Modifiers.new()
+@export var attributes := Attribute_Array.new()
+@export var attribute_boosts : Dictionary = {
+	"anc_n" : [null, null, null],
+	"anc_a" : [null, null],
+	"anc_f" : null,
+	"bg" : [null, null],
+	"cls" : null,
+	"1st" : [null, null, null, null],
+	"5th" : [null, null, null, null],
+	"10th" : [null, null, null, null],
+	"20th" : [null, null, null, null]
+}
 @export var key_ability:= Global.Attributes.STRENGTH
 
 @export var languages: Array[String] = ["Common"]

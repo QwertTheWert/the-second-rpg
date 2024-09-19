@@ -4,8 +4,11 @@
 
 [resource]
 script = ExtResource("1_5vep4")
-id = "14"
 name = "Gambler"
+variant_name = ""
 attribute_boost = Array[int]([1, 5])
 skill = 4
-text = "The thrill of the win drew you into games of chance. This might have been a lucrative sideline that paled in comparison to the real risks of adventuring, or you might have fallen on hard times due to your gambling and pursued adventuring as a way out of a spiral."
+variants = Array[ExtResource("1_5vep4")]([])
+is_variant = false
+text = "The thrill of the win drew you into games of chance. This might have been a lucrative sideline that paled in comparison to the real risks of adventuring, or you might have fallen on hard times due to your gambling and pursued adventuring as a way out of a spiral.
+"

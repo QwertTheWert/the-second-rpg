@@ -1,12 +1,15 @@
-[gd_resource type="Resource" script_class="Heritage_Data" load_steps=2 format=3 uid="uid://dwcsmmmd0yho3"]
+[gd_resource type="Resource" script_class="Heritage_Data" load_steps=3 format=3 uid="uid://dwcsmmmd0yho3"]
 
+[ext_resource type="Texture2D" uid="uid://hljftvp5sq32" path="res://assets/data/heritage/irongut-goblin.webp" id="1_aykkl"]
 [ext_resource type="Script" path="res://scripts/data/heritage_data.gd" id="1_l1qot"]
 
 [resource]
 script = ExtResource("1_l1qot")
-id = "0301"
 name = "Irongut Goblin"
+image = ExtResource("1_aykkl")
+traits = Array[String]([])
 abilities = []
 variants = Array[ExtResource("1_l1qot")]([])
+is_prerequisite_for = Array[Resource("res://scripts/data/feature_data.gd")]([])
 is_variant = false
 text = ""

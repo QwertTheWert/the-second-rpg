@@ -13,14 +13,15 @@ enum Weapons { UNARMED, SIMPLE, MARTIAL, ADVANCED }
 enum Classes { CLERIC, FIGHTER, ROGUE, WIZARD }
 
 enum Darksense { NORMAL, LOW_LIGHT_VISION, DARKVISION, GREATER_DARKVISION}
-
+enum Actions { FREE, ONE, TWO, THREE, REACTION, NONE }
+enum Abilities { FEAT, FEATURE, SUBCLASS }
 enum Attributes { STRENGTH, DEXTERITY, CONSTITUTION, INTELLIGENCE, WISDOM, CHARISMA }
 
 enum Size { TINY, SMALL, MEDIUM, LARGE, HUGE, GARGANTUAN }
 enum Gamemode { EXPLORATION, ENCOUNTER }
 enum Prof_Rank { UNTRAINED=0, TRAINED=2, EXPERT=4, MASTER=6, LEGENDARY=8 }
 
-@onready var gamemode : Global.Gamemode
+@onready var gamemode : Gamemode
 
 var save: Save_Data
 var selected_character: Array[String]
@@ -47,13 +48,13 @@ func _create_or_load_save() -> void:
 		save = Save_Data.load_save_data() as Save_Data
 	else:
 		save = Save_Data.new()
-		_load_characters()
+#		_load_characters()
 		save.map_name = "map_1"
 		save.global_position = Vector2i(2,2)
 		
 		save.writesave_data()
 		
-	gamemode = save.gamemode
+#	gamemode = save.gamemode
 	
 func _load_characters():
 	var dir = DirAccess.open(save.CHARACTERS_FOLDER_PATH)

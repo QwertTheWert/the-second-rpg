@@ -4,8 +4,11 @@
 
 [resource]
 script = ExtResource("1_7prw3")
-id = "09"
 name = "Emissary"
+variant_name = ""
 attribute_boost = Array[int]([3, 5])
 skill = 13
-text = "As a diplomat or messenger, you traveled to lands far and wide. Communicating with new people and forming alliances were your stock and trade."
+variants = Array[ExtResource("1_7prw3")]([])
+is_variant = false
+text = "As a diplomat or messenger, you traveled to lands far and wide. Communicating with new people and forming alliances were your stock and trade.
+"

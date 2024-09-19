@@ -4,8 +4,11 @@
 
 [resource]
 script = ExtResource("1_6fug3")
-id = "07"
 name = "Criminal"
+variant_name = ""
 attribute_boost = Array[int]([1, 3])
 skill = 14
-text = "As an unscrupulous independent or as a member of an underworld organization, you lived a life of crime. You might have become an adventurer to seek redemption, to escape the law, or simply to get access to bigger and better loot."
+variants = Array[ExtResource("1_6fug3")]([])
+is_variant = false
+text = "As an unscrupulous independent or as a member of an underworld organization, you lived a life of crime. You might have become an adventurer to seek redemption, to escape the law, or simply to get access to bigger and better loot.
+"

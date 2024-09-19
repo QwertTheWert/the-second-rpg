@@ -8,10 +8,11 @@
 
 [resource]
 script = ExtResource("1_bh7rb")
-id = "23"
 name = "Scholar"
+variant_name = ""
 attribute_boost = Array[int]([3, 4])
 skill = 0
 variants = Array[ExtResource("1_bh7rb")]([ExtResource("2_l6hwr"), ExtResource("3_kgdqk"), ExtResource("4_d165n"), ExtResource("5_ev8js")])
 is_variant = false
-text = "You have a knack for learning, and sequestered yourself from the outside world to learn all you could. You read about so many wondrous places and things in your books, and always dreamed about one day seeing the real things. Eventually, that curiosity led you to leave your studies and become an adventurer."
+text = "You have a knack for learning, and sequestered yourself from the outside world to learn all you could. You read about so many wondrous places and things in your books, and always dreamed about one day seeing the real things. Eventually, that curiosity led you to leave your studies and become an adventurer.
+"

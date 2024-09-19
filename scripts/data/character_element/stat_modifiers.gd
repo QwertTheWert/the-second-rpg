@@ -1,4 +1,4 @@
-class_name Stat_Modifiers
+class_name Attribute_Array
 extends Resource
 
 @export var strength:= 0.0

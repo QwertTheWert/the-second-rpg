@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Feature_Data" load_steps=3 format=3 uid="uid://6vlxr5mme5bd"]
+
+[ext_resource type="Texture2D" uid="uid://dt7amoksof5vb" path="res://assets/data/features/attack-of-opportunity.webp" id="1_fs1at"]
+[ext_resource type="Script" path="res://scripts/data/feature_data.gd" id="2_k4ps5"]
+
+[resource]
+script = ExtResource("2_k4ps5")
+name = "Attack of Opportunity"
+variant_name = ""
+type = 1
+image = ExtResource("1_fs1at")
+level = 1
+traits = Array[String]([])
+prerequisites = Array[ExtResource("2_k4ps5")]([])
+is_prerequisite_for = Array[ExtResource("2_k4ps5")]([])
+variants = Array[ExtResource("2_k4ps5")]([])
+is_variant = false
+upper_text = ""
+text = "Ever watchful for weaknesses, you can quickly attack foes that leave an opening in their defenses. You gain the Attack of Opportunity reaction.
+"
+ability = ""

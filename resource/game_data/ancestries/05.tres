@@ -1,18 +1,22 @@
-[gd_resource type="Resource" script_class="Ancestry_Data" load_steps=4 format=3 uid="uid://dc08okoayig0b"]
+[gd_resource type="Resource" script_class="Ancestry_Data" load_steps=5 format=3 uid="uid://kbdtfwmf1q2i"]
 
 [ext_resource type="Resource" uid="uid://2ot5qs6m8j4h" path="res://resource/game_data/heritages/0500.tres" id="1_f4egd"]
 [ext_resource type="Script" path="res://scripts/data/ancestry_data.gd" id="1_mex34"]
 [ext_resource type="Resource" uid="uid://mf3xe70tefho" path="res://resource/game_data/heritages/0501.tres" id="2_ukgj0"]
+[ext_resource type="Texture2D" uid="uid://e4nkn7m22eov" path="res://assets/data/ancestry/human.svg" id="3_wv6de"]
 
 [resource]
 script = ExtResource("1_mex34")
 name = "Human"
+image = ExtResource("3_wv6de")
 traits = Array[String](["Human", "Humanoid"])
 heritages = Array[Resource("res://scripts/data/heritage_data.gd")]([ExtResource("1_f4egd"), ExtResource("2_ukgj0")])
+feats = Array[Resource("res://scripts/data/feature_data.gd")]([])
 attribute_boost = Array[int]([])
 attribute_flaw = Array[int]([])
 size = 2
 ancestry_hp = 8
 speed = 5
-abilities = []
-text = "As unpredictable and varied as any of Golarion’s peoples, humans have exceptional drive and the capacity to endure and expand. Though many civilizations thrived before humanity rose to prominence, humans have built some of the greatest and the most terrible societies throughout the course of history, and today they are the most populous people in the realms around the world."
+features = Array[Resource("res://scripts/data/feature_data.gd")]([])
+text = "As unpredictable and varied as any of Golarion’s peoples, humans have exceptional drive and the capacity to endure and expand. Though many civilizations thrived before humanity rose to prominence, humans have built some of the greatest and the most terrible societies throughout the course of history, and today they are the most populous people in the realms around the world.
+"

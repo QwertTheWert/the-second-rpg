@@ -1,12 +1,15 @@
-[gd_resource type="Resource" script_class="Heritage_Data" load_steps=2 format=3 uid="uid://dshq4xy00bpv3"]
+[gd_resource type="Resource" script_class="Heritage_Data" load_steps=3 format=3 uid="uid://48mr46fe7pui"]
 
+[ext_resource type="Texture2D" uid="uid://chteoqh6ka0ik" path="res://assets/data/heritage/seer-elf.webp" id="1_4cdkr"]
 [ext_resource type="Script" path="res://scripts/data/heritage_data.gd" id="1_xai1i"]
 
 [resource]
 script = ExtResource("1_xai1i")
-id = "0101"
-name = "Whisper Elf"
+name = "Seer Elf"
+image = ExtResource("1_4cdkr")
+traits = Array[String]([])
 abilities = []
 variants = Array[ExtResource("1_xai1i")]([])
+is_prerequisite_for = Array[Resource("res://scripts/data/feature_data.gd")]([])
 is_variant = false
 text = ""

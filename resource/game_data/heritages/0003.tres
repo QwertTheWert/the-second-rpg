@@ -1,12 +1,16 @@
-[gd_resource type="Resource" script_class="Heritage_Data" load_steps=2 format=3 uid="uid://dto6jfw5h71oq"]
+[gd_resource type="Resource" script_class="Heritage_Data" load_steps=3 format=3 uid="uid://dto6jfw5h71oq"]
 
 [ext_resource type="Script" path="res://scripts/data/heritage_data.gd" id="1_bgir0"]
+[ext_resource type="Texture2D" uid="uid://c3xcyjnnxmqgi" path="res://assets/data/heritage/strong-blooded-dwarf.webp" id="1_v1v23"]
 
 [resource]
 script = ExtResource("1_bgir0")
-id = "0003"
 name = "Strong-Blooded Dwarf"
+image = ExtResource("1_v1v23")
+traits = Array[String]([])
 abilities = []
 variants = Array[ExtResource("1_bgir0")]([])
+is_prerequisite_for = Array[Resource("res://scripts/data/feature_data.gd")]([])
 is_variant = false
-text = ""
+text = "Your blood runs hearty and strong, and you can shake off toxins. You gain poison resistance equal to half your level (minimum 1), and each of your successful saving throws against a poison affliction reduces its stage by 2, or by 1 for a virulent poison. Each critical success against an ongoing poison reduces its stage by 3, or by 2 for a virulent poison.
+"

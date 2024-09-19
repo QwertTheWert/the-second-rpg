@@ -1,9 +1,0 @@
-[gd_scene load_steps=3 format=3 uid="uid://cimnypr5kregm"]
-
-[ext_resource type="Texture2D" uid="uid://cukubpjgaqw6q" path="res://archive/assets/portraits/portrait-slots.png" id="1_csjdt"]
-[ext_resource type="Script" path="res://archive/scripts/portrait_slot.gd" id="2_p20tj"]
-
-[node name="PortraitSlot" type="TextureRect" groups=["Portrait Slot"]]
-custom_minimum_size = Vector2(96, 128)
-texture = ExtResource("1_csjdt")
-script = ExtResource("2_p20tj")

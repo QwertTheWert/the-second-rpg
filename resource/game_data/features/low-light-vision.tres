@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Feature_Data" load_steps=3 format=3 uid="uid://dri8t1tb3t7ng"]
+
+[ext_resource type="Texture2D" uid="uid://xxrfj1d8kkwj" path="res://assets/data/features/low-light-vision.webp" id="1_pam0v"]
+[ext_resource type="Script" path="res://scripts/data/feature_data.gd" id="2_j5epa"]
+
+[resource]
+script = ExtResource("2_j5epa")
+name = "Low-Light Vision"
+variant_name = ""
+type = 1
+image = ExtResource("1_pam0v")
+level = 1
+traits = Array[String]([])
+prerequisites = Array[ExtResource("2_j5epa")]([])
+is_prerequisite_for = Array[ExtResource("2_j5epa")]([])
+variants = Array[ExtResource("2_j5epa")]([])
+is_variant = false
+upper_text = ""
+text = "You can see in dim light as though it were bright light, so you ignore the concealed condition due to dim light.
+"
+ability = ""

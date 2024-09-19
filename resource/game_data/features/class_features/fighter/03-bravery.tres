@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Feature_Data" load_steps=3 format=3 uid="uid://bvremppjrwq7r"]
+
+[ext_resource type="Texture2D" uid="uid://f8ejotl7jk8p" path="res://assets/data/features/bravery.webp" id="1_yjkhm"]
+[ext_resource type="Script" path="res://scripts/data/feature_data.gd" id="2_hek6l"]
+
+[resource]
+script = ExtResource("2_hek6l")
+name = "Bravery"
+variant_name = ""
+type = 1
+image = ExtResource("1_yjkhm")
+level = 3
+traits = Array[String]([])
+prerequisites = Array[ExtResource("2_hek6l")]([])
+is_prerequisite_for = Array[ExtResource("2_hek6l")]([])
+variants = Array[ExtResource("2_hek6l")]([])
+is_variant = false
+upper_text = ""
+text = "Having faced countless foes and the chaos of battle, you have learned how to stand strong in the face of fear and keep on fighting. Your proficiency rank for Will saves increases to expert. When you roll a success at a Will save against a fear effect, you get a critical success instead. In addition, anytime you gain the frightened condition, reduce its value by 1.
+"
+ability = ""

@@ -1,0 +1,6 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://ciohpp17kqg7q"]
+
+[ext_resource type="FontFile" uid="uid://bsuv14hib8b6o" path="res://assets/themes/Tinos-Regular.ttf" id="1_l8dnj"]
+
+[resource]
+font = ExtResource("1_l8dnj")

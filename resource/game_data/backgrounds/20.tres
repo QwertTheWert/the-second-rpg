@@ -6,10 +6,11 @@
 
 [resource]
 script = ExtResource("1_7qrou")
-id = "20"
 name = "Martial Disciple"
+variant_name = ""
 attribute_boost = Array[int]([0, 1])
 skill = 0
 variants = Array[ExtResource("1_7qrou")]([ExtResource("2_s87k6"), ExtResource("3_6lf0l")])
 is_variant = false
-text = "You dedicated yourself to intense training and rigorous study to become a great warrior. The school you attended might have been a traditionalist monastery, an elite military academy, or the local branch of a prestigious mercenary organization."
+text = "You dedicated yourself to intense training and rigorous study to become a great warrior. The school you attended might have been a traditionalist monastery, an elite military academy, or the local branch of a prestigious mercenary organization.
+"

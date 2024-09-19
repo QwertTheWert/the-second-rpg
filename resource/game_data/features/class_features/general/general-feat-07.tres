@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Feature_Data" load_steps=2 format=3 uid="uid://gibntt1drr82"]
+
+[ext_resource type="Script" path="res://scripts/data/feature_data.gd" id="1_0hp2f"]
+
+[resource]
+script = ExtResource("1_0hp2f")
+name = "General Feat"
+variant_name = ""
+type = 1
+level = 7
+traits = Array[String]([])
+prerequisites = Array[ExtResource("1_0hp2f")]([])
+is_prerequisite_for = Array[ExtResource("1_0hp2f")]([])
+variants = Array[ExtResource("1_0hp2f")]([])
+is_variant = false
+upper_text = ""
+text = "At 3rd level and every 4 levels thereafter, you gain a general feat.
+"
+ability = ""

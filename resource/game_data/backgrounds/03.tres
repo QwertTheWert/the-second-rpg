@@ -4,8 +4,11 @@
 
 [resource]
 script = ExtResource("1_s6bm0")
-id = "03"
 name = "Artist"
+variant_name = ""
 attribute_boost = Array[int]([1, 5])
 skill = 3
-text = "Your art is your greatest passion, whatever form it takes. Adventuring might help you find inspiration, or simply be a way to survive until you become a world-famous artist."
+variants = Array[ExtResource("1_s6bm0")]([])
+is_variant = false
+text = "Your art is your greatest passion, whatever form it takes. Adventuring might help you find inspiration, or simply be a way to survive until you become a world-famous artist.
+"

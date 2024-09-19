@@ -1,5 +1,11 @@
-res://scenes/CharacterBuilder/CharacterBuilder.tscn
-res://scripts/data/floor_data.gd
-res://scripts/portrait/portrait.gd
-res://scripts/token/token.gd
-res://assets/themes/general_ui.tres
+res://scenes/character-builder/CharacterBuilder.tscn
+res://assets/themes/ui_general.tres
+res://assets/themes/traits.tres
+res://assets/themes/preview_box.tres
+res://resource/themes/token.tres
+res://scenes/Main/main.gd
+res://scenes/character-builder/child_element.tscn
+res://scenes/token.tscn
+res://node_2e.tscn
+res://options.tscn
+res://scenes/Main/main.tscn

@@ -4,8 +4,11 @@
 
 [resource]
 script = ExtResource("1_n7tmo")
-id = "18"
 name = "Hunter"
+variant_name = ""
 attribute_boost = Array[int]([1, 4])
 skill = 15
-text = "You stalked and took down animals and other creatures of the wild. Skinning animals, harvesting their flesh, and cooking them were also part of your training, all of which can give you useful resources while you adventure."
+variants = Array[ExtResource("1_n7tmo")]([])
+is_variant = false
+text = "You stalked and took down animals and other creatures of the wild. Skinning animals, harvesting their flesh, and cooking them were also part of your training, all of which can give you useful resources while you adventure.
+"

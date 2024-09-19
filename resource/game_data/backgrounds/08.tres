@@ -4,8 +4,11 @@
 
 [resource]
 script = ExtResource("1_1847q")
-id = "08"
 name = "Detective"
+variant_name = ""
 attribute_boost = Array[int]([3, 4])
 skill = 13
-text = "You solved crimes as a police inspector or took jobs for wealthy clients as a private investigator. You might have become an adventurer as part of your next big mystery, but likely it was due to the consequences or aftermath of a prior case."
+variants = Array[ExtResource("1_1847q")]([])
+is_variant = false
+text = "You solved crimes as a police inspector or took jobs for wealthy clients as a private investigator. You might have become an adventurer as part of your next big mystery, but likely it was due to the consequences or aftermath of a prior case.
+"

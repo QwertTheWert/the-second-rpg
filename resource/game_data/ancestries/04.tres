@@ -1,20 +1,24 @@
-[gd_resource type="Resource" script_class="Ancestry_Data" load_steps=6 format=3 uid="uid://bkhaqmkq4li82"]
+[gd_resource type="Resource" script_class="Ancestry_Data" load_steps=7 format=3 uid="uid://dpqklc5qikslp"]
 
 [ext_resource type="Resource" uid="uid://d27hc3tew3hgm" path="res://resource/game_data/heritages/0400.tres" id="1_e6x0r"]
 [ext_resource type="Script" path="res://scripts/data/ancestry_data.gd" id="1_rj7ib"]
 [ext_resource type="Resource" uid="uid://dqnbv1xfjnh31" path="res://resource/game_data/heritages/0401.tres" id="2_544ic"]
 [ext_resource type="Resource" uid="uid://o53w57xlted7" path="res://resource/game_data/heritages/0402.tres" id="3_dfcc7"]
 [ext_resource type="Resource" uid="uid://b11wbahhtl0wg" path="res://resource/game_data/heritages/0403.tres" id="4_slurl"]
+[ext_resource type="Texture2D" uid="uid://cs0b8r5wfhskd" path="res://assets/data/ancestry/halfling.svg" id="5_nq0q5"]
 
 [resource]
 script = ExtResource("1_rj7ib")
 name = "Halfling"
-traits = Array[String](["Humanoid", "Halfling"])
+image = ExtResource("5_nq0q5")
+traits = Array[String](["Halfling", "Humanoid"])
 heritages = Array[Resource("res://scripts/data/heritage_data.gd")]([ExtResource("1_e6x0r"), ExtResource("2_544ic"), ExtResource("3_dfcc7"), ExtResource("4_slurl")])
+feats = Array[Resource("res://scripts/data/feature_data.gd")]([])
 attribute_boost = Array[int]([1, 5])
 attribute_flaw = Array[int]([0])
 size = 1
 ancestry_hp = 6
 speed = 5
-abilities = []
-text = "The convoluted histories other people cling to don’t interest goblins. These small folk live in the moment, and they prefer tall tales over factual records. The wars of a few decades ago might as well be from the ancient past. Misunderstood by other people, goblins are happy how they are. Goblin virtues are about being present, creative, and honest. They strive to lead fulfilled lives, rather than worrying about how their journeys will end. To tell stories, not nitpick the facts. To be small, but dream big."
+features = Array[Resource("res://scripts/data/feature_data.gd")]([])
+text = "The convoluted histories other people cling to don’t interest goblins. These small folk live in the moment, and they prefer tall tales over factual records. The wars of a few decades ago might as well be from the ancient past. Misunderstood by other people, goblins are happy how they are. Goblin virtues are about being present, creative, and honest. They strive to lead fulfilled lives, rather than worrying about how their journeys will end. To tell stories, not nitpick the facts. To be small, but dream big.
+"

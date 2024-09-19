@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Feature_Data" load_steps=2 format=3 uid="uid://c682o47tpd33t"]
+
+[ext_resource type="Script" path="res://scripts/data/feature_data.gd" id="1_4m7ix"]
+
+[resource]
+script = ExtResource("1_4m7ix")
+name = "Sneak Attack"
+variant_name = ""
+type = 1
+level = 1
+traits = Array[String]([])
+prerequisites = Array[ExtResource("1_4m7ix")]([])
+is_prerequisite_for = Array[ExtResource("1_4m7ix")]([])
+variants = Array[ExtResource("1_4m7ix")]([])
+is_variant = false
+upper_text = ""
+text = "You spring into combat faster than foes can react. On the first round of combat, if you roll Deception or Stealth for initiative, creatures that haven’t acted are flat-footed to you.
+"
+ability = ""

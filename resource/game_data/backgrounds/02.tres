@@ -4,8 +4,11 @@
 
 [resource]
 script = ExtResource("1_vh3ya")
-id = "02"
 name = "Artisan"
+variant_name = ""
 attribute_boost = Array[int]([0, 3])
 skill = 3
-text = "As an apprentice, you practiced a particular form of building or crafting, developing specialized skill. You might have been a blacksmith’s apprentice toiling over the forge for countless hours, a young tailor sewing garments of all kinds, or a shipwright shaping the hulls of ships."
+variants = Array[ExtResource("1_vh3ya")]([])
+is_variant = false
+text = "As an apprentice, you practiced a particular form of building or crafting, developing specialized skill. You might have been a blacksmith’s apprentice toiling over the forge for countless hours, a young tailor sewing garments of all kinds, or a shipwright shaping the hulls of ships.
+"

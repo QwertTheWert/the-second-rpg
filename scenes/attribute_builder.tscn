@@ -1,0 +1,113 @@
+[gd_scene load_steps=2 format=3 uid="uid://dv6ye3rt5emhy"]
+
+[ext_resource type="Theme" uid="uid://cf273hwc4yhwc" path="res://assets/themes/attribute-builder.tres" id="1_ace13"]
+
+[node name="AttributeBuilder" type="GridContainer"]
+theme = ExtResource("1_ace13")
+columns = 7
+
+[node name="Empty" type="Panel" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Strength" type="Panel" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="RichTextLabel" parent="Strength"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[font_size=32][center]STR[/center][/font_size]
+[center]Strength[/center]"
+fit_content = true
+
+[node name="Dexterity" type="Panel" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="RichTextLabel" parent="Dexterity"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[font_size=32][center]DEX[/center][/font_size]
+[center]Dexterity[/center]"
+fit_content = true
+
+[node name="Constitution" type="Panel" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="RichTextLabel" parent="Constitution"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[font_size=32][center]CON[/center][/font_size]
+[center]Constitution[/center]"
+fit_content = true
+
+[node name="Intelligence" type="Panel" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="RichTextLabel" parent="Intelligence"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[font_size=32][center]INT[/center][/font_size]
+[center]Intelligence[/center]"
+fit_content = true
+
+[node name="Wisdom" type="Panel" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="RichTextLabel" parent="Wisdom"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[font_size=32][center]WIS[/center][/font_size]
+[center]Wisdom[/center]"
+fit_content = true
+
+[node name="Charisma" type="Panel" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="RichTextLabel" parent="Charisma"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[font_size=32][center]CHA[/center][/font_size]
+[center]Charisma[/center]"
+fit_content = true

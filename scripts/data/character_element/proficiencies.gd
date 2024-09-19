@@ -18,10 +18,8 @@ extends Resource
 @export var simple:= Global.Prof_Rank.UNTRAINED
 @export var unarmed:= Global.Prof_Rank.UNTRAINED
 
-@export var spell_arcane:= Global.Prof_Rank.UNTRAINED
-@export var spell_divine:= Global.Prof_Rank.UNTRAINED
-@export var spell_occult:= Global.Prof_Rank.UNTRAINED
-@export var spell_primal:= Global.Prof_Rank.UNTRAINED
+@export var spells:= Global.Prof_Rank.UNTRAINED
+@export var impulses:= Global.Prof_Rank.UNTRAINED
 
 @export var acrobatics:= Global.Prof_Rank.UNTRAINED
 @export var arcana:= Global.Prof_Rank.UNTRAINED

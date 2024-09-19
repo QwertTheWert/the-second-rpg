@@ -1,0 +1,53 @@
+[gd_scene load_steps=6 format=3 uid="uid://7tb0cxvxh63l"]
+
+[ext_resource type="Texture2D" uid="uid://by8o6cugfwbu0" path="res://assets/data/ancestry/ancestry.png" id="1_vhi21"]
+[ext_resource type="Texture2D" uid="uid://c4iln1ixjbqf1" path="res://assets/portrait/normal.png" id="2_85d20"]
+[ext_resource type="Texture2D" uid="uid://ciaikqjpag3j" path="res://assets/portrait/selected.png" id="3_4qb00"]
+[ext_resource type="Texture2D" uid="uid://klwed550mk4j" path="res://assets/portrait/hover.png" id="4_f85hy"]
+[ext_resource type="Texture2D" uid="uid://dhv4ketjlnl0j" path="res://assets/data/heritage/heritage.png" id="5_1v3rb"]
+
+[node name="Options" type="GridContainer"]
+size_flags_horizontal = 4
+columns = 4
+
+[node name="AncestryOptionButton" type="TextureRect" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(72, 72)
+layout_mode = 2
+texture = ExtResource("1_vhi21")
+expand_mode = 2
+
+[node name="Button" type="TextureButton" parent="AncestryOptionButton"]
+custom_minimum_size = Vector2(72, 72)
+layout_mode = 2
+offset_right = 72.0
+offset_bottom = 72.0
+size_flags_horizontal = 4
+toggle_mode = true
+button_pressed = true
+texture_normal = ExtResource("2_85d20")
+texture_pressed = ExtResource("3_4qb00")
+texture_disabled = ExtResource("4_f85hy")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="HeritageOptionButton" type="TextureRect" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(72, 72)
+layout_mode = 2
+texture = ExtResource("5_1v3rb")
+expand_mode = 2
+
+[node name="Button" type="TextureButton" parent="HeritageOptionButton"]
+custom_minimum_size = Vector2(72, 72)
+layout_mode = 2
+offset_right = 72.0
+offset_bottom = 72.0
+size_flags_horizontal = 4
+disabled = true
+toggle_mode = true
+texture_normal = ExtResource("2_85d20")
+texture_pressed = ExtResource("3_4qb00")
+texture_disabled = ExtResource("4_f85hy")
+ignore_texture_size = true
+stretch_mode = 0

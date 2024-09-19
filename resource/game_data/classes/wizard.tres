@@ -1,0 +1,34 @@
+[gd_resource type="Resource" script_class="Class_Data" load_steps=3 format=3 uid="uid://dawm8pv84vdn3"]
+
+[ext_resource type="Script" path="res://scripts/data/class_data.gd" id="1_8pr5d"]
+[ext_resource type="Texture2D" uid="uid://gsm3jsdyalal" path="res://assets/data/class/wizard.webp" id="1_so7e1"]
+
+[resource]
+script = ExtResource("1_8pr5d")
+name = "Wizard"
+image = ExtResource("1_so7e1")
+key_attribute = Array[int]([3])
+class_hp = 6
+perception = 2
+fortitude = 2
+reflex = 2
+will = 4
+unarmed = 2
+simple = 2
+martial = 0
+advanced = 0
+unarmored = 2
+light = 0
+medium = 0
+heavy = 0
+class_dc = 0
+arcane = 0
+divine = 0
+occult = 0
+primal = 0
+features = Array[Resource("res://scripts/data/feature_data.gd")]([])
+feats = Array[Resource("res://scripts/data/feature_data.gd")]([])
+subclasses1 = Array[Resource("res://scripts/data/feature_data.gd")]([])
+subclasses2 = Array[Resource("res://scripts/data/feature_data.gd")]([])
+text = "You are an eternal student of the arcane secrets of the universe, using your mastery of magic to cast powerful and devastating spells. You treat magic like a science, cross-referencing the latest texts on practical spellcraft with ancient esoteric tomes to discover and understand how magic works. Yet magical theory is vast, and there’s no way you can study it all. You either specialize in one of the eight schools of magic, gaining deeper understanding of the nuances of those spells above all others, or favor a broader approach that emphasizes the way all magic comes together at the expense of depth.
+"

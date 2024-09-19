@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0tpu625bck7s"]
+
+[ext_resource type="Theme" uid="uid://b51q1ol71vvcq" path="res://assets/themes/iconic_label.tres" id="1_bt3nw"]
+[ext_resource type="Script" path="res://scenes/character-builder/child_element.gd" id="2_cbqkk"]
+
+[node name="ChildElement" type="HBoxContainer"]
+offset_left = 10.0
+offset_right = 94.0
+offset_bottom = 40.0
+tooltip_text = "Test"
+theme = ExtResource("1_bt3nw")
+script = ExtResource("2_cbqkk")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+expand_mode = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+text = "Test"

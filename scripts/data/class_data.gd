@@ -2,8 +2,10 @@ class_name Class_Data
 extends Resource
 
 @export var name := ""
+@export var image := load("res://assets/data/class/class.svg")
+var traits: Array[String] = []
 
-@export var key_attribute: Array[Global.Attributes] = []
+@export var key_attribute: Array[Global.Attributes] = [Global.Attributes.STRENGTH]
 @export var class_hp := 8
 @export var perception := Global.Prof_Rank.TRAINED
 
@@ -21,6 +23,18 @@ extends Resource
 @export var medium := Global.Prof_Rank.UNTRAINED
 @export var heavy := Global.Prof_Rank.UNTRAINED
 
-@export var class_dc := Global.Prof_Rank.TRAINED
+@export var class_dc := Global.Prof_Rank.UNTRAINED
+@export var arcane := Global.Prof_Rank.UNTRAINED
+@export var divine := Global.Prof_Rank.UNTRAINED
+@export var occult := Global.Prof_Rank.UNTRAINED
+@export var primal := Global.Prof_Rank.UNTRAINED
+
+@export var features : Array[Feature_Data] = []
+@export var feats : Array[Feature_Data] = []
+
+@export var subclasses1 : Array[Feature_Data] = []
+@export var subclasses2 : Array[Feature_Data] = []
+
+const is_variant = false
 
 @export_multiline var text := ""

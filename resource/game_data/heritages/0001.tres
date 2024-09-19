@@ -1,12 +1,16 @@
-[gd_resource type="Resource" script_class="Heritage_Data" load_steps=2 format=3 uid="uid://cvrjhwqpi1ug"]
+[gd_resource type="Resource" script_class="Heritage_Data" load_steps=3 format=3 uid="uid://cvrjhwqpi1ug"]
 
 [ext_resource type="Script" path="res://scripts/data/heritage_data.gd" id="1_jomo3"]
+[ext_resource type="Texture2D" uid="uid://chw61wglrllxc" path="res://assets/data/heritage/forge-dwarf.webp" id="1_m5c7v"]
 
 [resource]
 script = ExtResource("1_jomo3")
-id = "0001"
 name = "Forge Dwarf"
+image = ExtResource("1_m5c7v")
+traits = Array[String]([])
 abilities = []
 variants = Array[ExtResource("1_jomo3")]([])
+is_prerequisite_for = Array[Resource("res://scripts/data/feature_data.gd")]([])
 is_variant = false
-text = ""
+text = "Your ancestors have been tomb guardians for generations, and the power they cultivated to ward off necromancy has passed on to you. If you roll a success on a saving throw against a necromancy effect, you get a critical success instead. 
+"

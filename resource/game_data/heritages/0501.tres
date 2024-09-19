@@ -1,12 +1,15 @@
-[gd_resource type="Resource" script_class="Heritage_Data" load_steps=2 format=3 uid="uid://mf3xe70tefho"]
+[gd_resource type="Resource" script_class="Heritage_Data" load_steps=3 format=3 uid="uid://mf3xe70tefho"]
 
 [ext_resource type="Script" path="res://scripts/data/heritage_data.gd" id="1_6b0i8"]
+[ext_resource type="Texture2D" uid="uid://dnhrbhsb4jb6f" path="res://assets/data/heritage/adaptive-human.webp" id="1_gnn21"]
 
 [resource]
 script = ExtResource("1_6b0i8")
-id = "0500"
 name = "Adaptive Human"
+image = ExtResource("1_gnn21")
+traits = Array[String]([])
 abilities = []
 variants = Array[ExtResource("1_6b0i8")]([])
+is_prerequisite_for = Array[Resource("res://scripts/data/feature_data.gd")]([])
 is_variant = false
 text = ""

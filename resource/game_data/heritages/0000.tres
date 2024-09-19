@@ -1,12 +1,16 @@
-[gd_resource type="Resource" script_class="Heritage_Data" load_steps=2 format=3 uid="uid://bm0n0g012hf51"]
+[gd_resource type="Resource" script_class="Heritage_Data" load_steps=3 format=3 uid="uid://uji65bny57mx"]
 
+[ext_resource type="Texture2D" uid="uid://bnvq55kxvapvf" path="res://assets/data/heritage/anvil-dwarf.webp" id="1_1jg2b"]
 [ext_resource type="Script" path="res://scripts/data/heritage_data.gd" id="1_8ke1q"]
 
 [resource]
 script = ExtResource("1_8ke1q")
-id = "0000"
 name = "Anvil Dwarf"
+image = ExtResource("1_1jg2b")
+traits = Array[String]([])
 abilities = []
 variants = Array[ExtResource("1_8ke1q")]([])
+is_prerequisite_for = Array[Resource("res://scripts/data/feature_data.gd")]([])
 is_variant = false
-text = ""
+text = "You are a descendant of a famed crafter and have your own amazing talent. Other dwarves might consider this a blessing from your ancestors or from the Forgefather himself, depending on where you grew up. You become trained in Crafting (or another skill if you were already trained in Crafting) and gain the Specialty Crafting skill feat, but you can pick two different specialties instead of one.
+"

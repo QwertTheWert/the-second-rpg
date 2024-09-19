@@ -28,7 +28,7 @@ func _process(delta)-> void:
 		velocity.y += 1
 	if Input.is_action_pressed("camera_up"):
 		velocity.y -= 1
-	
+#	velocity = Input.get_vector("left", "right", "up", "down")
 #	var mouse_pos = get_viewport().get_mouse_position()
 #	if mouse_pos.x > screen_size.x - mouse_pan_limit:
 #		velocity.x += 1

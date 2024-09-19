@@ -1,12 +1,15 @@
-[gd_resource type="Resource" script_class="Heritage_Data" load_steps=2 format=3 uid="uid://2ot5qs6m8j4h"]
+[gd_resource type="Resource" script_class="Heritage_Data" load_steps=3 format=3 uid="uid://2ot5qs6m8j4h"]
 
+[ext_resource type="Texture2D" uid="uid://bn7telooa3gdb" path="res://assets/data/heritage/skilled-human.webp" id="1_1y63c"]
 [ext_resource type="Script" path="res://scripts/data/heritage_data.gd" id="1_dxppb"]
 
 [resource]
 script = ExtResource("1_dxppb")
-id = "0500"
 name = "Skilled Human"
+image = ExtResource("1_1y63c")
+traits = Array[String]([])
 abilities = []
 variants = Array[ExtResource("1_dxppb")]([])
+is_prerequisite_for = Array[Resource("res://scripts/data/feature_data.gd")]([])
 is_variant = false
 text = ""

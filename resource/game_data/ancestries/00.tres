@@ -1,20 +1,26 @@
-[gd_resource type="Resource" script_class="Ancestry_Data" load_steps=6 format=3 uid="uid://1mg2o0ltbk1p"]
+[gd_resource type="Resource" script_class="Ancestry_Data" load_steps=9 format=3 uid="uid://m7wi6coqj1qj"]
 
-[ext_resource type="Resource" uid="uid://bm0n0g012hf51" path="res://resource/game_data/heritages/0000.tres" id="1_a4sll"]
+[ext_resource type="Resource" uid="uid://uji65bny57mx" path="res://resource/game_data/heritages/0000.tres" id="1_a4sll"]
+[ext_resource type="Resource" uid="uid://cgqtgctg88l1b" path="res://resource/game_data/features/darkvision.tres" id="1_wjsmk"]
 [ext_resource type="Resource" uid="uid://cvrjhwqpi1ug" path="res://resource/game_data/heritages/0001.tres" id="2_ir1b3"]
+[ext_resource type="Resource" uid="uid://ciakhhslw5j6p" path="res://resource/game_data/features/clans-edge.tres" id="2_t0xtc"]
 [ext_resource type="Resource" uid="uid://pe5tq50wfo6o" path="res://resource/game_data/heritages/0002.tres" id="3_jamar"]
 [ext_resource type="Resource" uid="uid://dto6jfw5h71oq" path="res://resource/game_data/heritages/0003.tres" id="4_bgcj0"]
 [ext_resource type="Script" path="res://scripts/data/ancestry_data.gd" id="5_f3moi"]
+[ext_resource type="Texture2D" uid="uid://cvrn3a8nel6fi" path="res://assets/data/ancestry/dwarf.svg" id="5_o765x"]
 
 [resource]
 script = ExtResource("5_f3moi")
 name = "Dwarf"
+image = ExtResource("5_o765x")
 traits = Array[String](["Dwarf", "Humanoid"])
 heritages = Array[Resource("res://scripts/data/heritage_data.gd")]([ExtResource("1_a4sll"), ExtResource("2_ir1b3"), ExtResource("3_jamar"), ExtResource("4_bgcj0")])
+feats = Array[Resource("res://scripts/data/feature_data.gd")]([ExtResource("2_t0xtc")])
 attribute_boost = Array[int]([0, 4])
 attribute_flaw = Array[int]([5])
 size = 2
 ancestry_hp = 10
 speed = 4
-abilities = []
-text = "Dwarves have a well-earned reputation as a stoic and stern people, ensconced within citadels and cities carved from solid rock. While some see them as dour and humorless crafters of stone and metal, dwarves and those who have spent time among them understand their unbridled zeal for their work, caring far more about quality than quantity. To a stranger, they can seem untrusting and clannish, but to their friends and family, they are warm and caring, their halls filled with the sounds of laughter and hammers hitting anvils."
+features = Array[Resource("res://scripts/data/feature_data.gd")]([ExtResource("1_wjsmk")])
+text = "Dwarves have a well-earned reputation as a stoic and stern people, ensconced within citadels and cities carved from solid rock. While some see them as dour and humorless crafters of stone and metal, dwarves and those who have spent time among them understand their unbridled zeal for their work, caring far more about quality than quantity. To a stranger, they can seem untrusting and clannish, but to their friends and family, they are warm and caring, their halls filled with the sounds of laughter and hammers hitting anvils.
+"

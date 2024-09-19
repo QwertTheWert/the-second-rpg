@@ -1,10 +1,13 @@
-[gd_resource type="Resource" script_class="Heritage_Data" load_steps=2 format=3 uid="uid://dshq4xy00bpv3"]
+[gd_resource type="Resource" script_class="Heritage_Data" load_steps=3 format=3 uid="uid://dshq4xy00bpv3"]
 
 [ext_resource type="Script" path="res://scripts/data/heritage_data.gd" id="1_qmln8"]
+[ext_resource type="Texture2D" uid="uid://dph6njf222p8k" path="res://assets/data/heritage/cavern-elf.webp" id="1_tvxvj"]
 
 [resource]
 script = ExtResource("1_qmln8")
-id = "0100"
 name = "Cavern Elf"
+image = ExtResource("1_tvxvj")
 abilities = []
+variants = Array[ExtResource("1_qmln8")]([])
+is_variant = false
 text = ""

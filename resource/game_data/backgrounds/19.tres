@@ -4,8 +4,11 @@
 
 [resource]
 script = ExtResource("1_fhlg5")
-id = "19"
 name = "Laborer"
+variant_name = ""
 attribute_boost = Array[int]([0, 2])
 skill = 2
-text = "You’ve spent years performing arduous physical labor. It was a difficult life, but you somehow survived. You may have embraced adventuring as an easier method to make your way in the world, or you might adventure under someone else’s command."
+variants = Array[ExtResource("1_fhlg5")]([])
+is_variant = false
+text = "You’ve spent years performing arduous physical labor. It was a difficult life, but you somehow survived. You may have embraced adventuring as an easier method to make your way in the world, or you might adventure under someone else’s command.
+"

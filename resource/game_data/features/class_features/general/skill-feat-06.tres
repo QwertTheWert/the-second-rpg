@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Feature_Data" load_steps=2 format=3 uid="uid://p1dwianntdb"]
+
+[ext_resource type="Script" path="res://scripts/data/feature_data.gd" id="1_6tblr"]
+
+[resource]
+script = ExtResource("1_6tblr")
+name = "Skill Feat"
+variant_name = ""
+type = 1
+level = 6
+traits = Array[String]([])
+prerequisites = Array[ExtResource("1_6tblr")]([])
+is_prerequisite_for = Array[ExtResource("1_6tblr")]([])
+variants = Array[ExtResource("1_6tblr")]([])
+is_variant = false
+upper_text = ""
+text = "At 2nd level and every 2 levels thereafter, you gain a skill feat. You must be trained or better in the corresponding skill to select a skill feat.
+"
+ability = ""

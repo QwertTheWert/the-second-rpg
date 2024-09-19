@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Feature_Data" load_steps=2 format=3 uid="uid://bqxmherghygvt"]
+
+[ext_resource type="Script" path="res://scripts/data/feature_data.gd" id="1_q2sfe"]
+
+[resource]
+script = ExtResource("1_q2sfe")
+name = "Class Feat"
+variant_name = ""
+type = 1
+level = 6
+traits = Array[String]([])
+prerequisites = Array[ExtResource("1_q2sfe")]([])
+is_prerequisite_for = Array[ExtResource("1_q2sfe")]([])
+variants = Array[ExtResource("1_q2sfe")]([])
+is_variant = false
+upper_text = ""
+text = "At 1st level and every even-numbered level thereafter, you gain a class feat for your class.
+"
+ability = ""

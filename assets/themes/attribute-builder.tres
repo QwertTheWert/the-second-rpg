@@ -1,0 +1,9 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://cf273hwc4yhwc"]
+
+[ext_resource type="FontFile" uid="uid://sqws1osiadn2" path="res://assets/themes/IMFellDoublePicaSC-Regular.ttf" id="1_c1img"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fj44d"]
+
+[resource]
+default_font = ExtResource("1_c1img")
+PanelContainer/styles/panel = SubResource("StyleBoxEmpty_fj44d")

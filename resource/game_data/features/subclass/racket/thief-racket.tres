@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Feature_Data" load_steps=2 format=3 uid="uid://utqmhudebf21"]
+
+[ext_resource type="Script" path="res://scripts/data/feature_data.gd" id="1_ncdw8"]
+
+[resource]
+script = ExtResource("1_ncdw8")
+name = "Thief"
+variant_name = ""
+type = 2
+level = 1
+traits = Array[String]([])
+actions = 5
+prerequisites = Array[ExtResource("1_ncdw8")]([])
+is_prerequisite_for = Array[ExtResource("1_ncdw8")]([])
+variants = Array[ExtResource("1_ncdw8")]([])
+is_variant = false
+upper_text = ""
+text = "Nothing beats the thrill of taking something that belongs to someone else, especially if you can do so completely unnoticed. You might be a pickpocket working the streets, a cat burglar sneaking through windows and escaping via rooftops, or a safecracker breaking into carefully guarded vaults. You might even work as a consultant, testing clients’ defenses by trying to steal something precious.
+
+When a fight breaks out, you prefer swift, lightweight weapons, and you strike where it hurts. When you attack with a finesse melee weapon, you can add your Dexterity modifier to damage rolls instead of your Strength modifier.
+
+[left]You are trained in Thievery.[/left]
+"
+ability = ""

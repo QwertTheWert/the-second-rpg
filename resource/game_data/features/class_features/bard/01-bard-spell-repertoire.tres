@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="Feature_Data" load_steps=3 format=3 uid="uid://b8cv6ghw0af87"]
+
+[ext_resource type="Script" path="res://scripts/data/feature_data.gd" id="1_5riog"]
+[ext_resource type="Texture2D" uid="uid://yq6dxkoi6x1o" path="res://assets/data/features/spellbook.webp" id="1_184wn"]
+
+[resource]
+script = ExtResource("1_5riog")
+name = "Bard Spell Repertoire"
+variant_name = ""
+type = 1
+image = ExtResource("1_184wn")
+level = 1
+traits = Array[String]([])
+prerequisites = Array[ExtResource("1_5riog")]([])
+is_prerequisite_for = Array[ExtResource("1_5riog")]([])
+variants = Array[ExtResource("1_5riog")]([])
+is_variant = false
+upper_text = ""
+text = "You can infuse your performances with magic to create unique effects called compositions. Compositions are a special type of spell that often require you to use the Performance skill when casting them. Composition spells are a type of focus spell. It costs 1 Focus Point to cast a focus spell, and you start with a focus pool of 1 Focus Point. You refill your focus pool during your daily preparations, and you can regain 1 Focus Point by spending 10 minutes using the Refocus activity to perform, write a new composition, or otherwise engage your muse.
+
+Focus spells are automatically heightened to half your level rounded up, much like cantrips. Focus spells don't require spell slots, and you can't cast them using spell slots. Taking feats can give you more focus spells and increase the size of your focus pool, though your focus pool can never hold more than 3 Focus Points. The full rules for focus spells are found here.
+
+You learn the counter performance composition spell, protecting against auditory and visual effects.
+
+[p align=left][font_size=24][b]Composition Cantrips[/b][/font_size][/p]
+Composition cantrips are special composition spells that don't cost Focus Points, so you can use them as often as you like. Composition cantrips are in addition to the cantrips you choose from the occult list. Generally, only feats can give you more composition cantrips. Unlike other cantrips, you can't swap out composition cantrips gained from bard feats at a later level, unless you swap out the specific feat via retraining. You learn the inspire courage composition cantrip, which boosts your allies' attacks, damage, and defense against fear.
+"
+ability = ""
